@@ -14,10 +14,10 @@ $(document).ready(function() {
       var awayTeam = results[i].strAwayTeam;
       console.log(homeTeam);
       console.log(awayTeam);
-      gameDiv.prepend(homeTeam);
-      gameDiv.prepend(awayTeam);
+      gameDiv.append(homeTeam);
+      gameDiv.append(awayTeam);
 
-      $("#games").prepend(gameDiv);
+      $("#games").append(gameDiv);
       console.log(response.data);
     }
   });
