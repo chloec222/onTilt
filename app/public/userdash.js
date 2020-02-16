@@ -14,7 +14,7 @@ $(document).ready(function() {
       var awayTeam = results[i].strAwayTeam;
       console.log(homeTeam);
       console.log(awayTeam);
-      gameDiv.append(homeTeam);
+      gameDiv.append(homeTeam + " " + "vs" + " ");
       gameDiv.append(awayTeam);
 
       $("#games").append(gameDiv);
