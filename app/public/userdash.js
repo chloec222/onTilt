@@ -10,11 +10,14 @@ $(document).ready(function() {
     for (var i = 0; i < results.length; i++) {
       var gameDiv = $("<div>");
       console.log(results);
+      var homeTeam = results[i].strHomeTeam;
+      var awayTeam = results[i].strAwayTeam;
+      console.log(homeTeam);
+      console.log(awayTeam);
+      gameDiv.prepend(homeTeam);
+      gameDiv.prepend(awayTeam);
 
-      gifDiv.prepend(p);
-      gifDiv.prepend(personImage);
-
-      $("#gifs").prepend(gifDiv);
+      $("#games").prepend(gameDiv);
       console.log(response.data);
     }
   });
