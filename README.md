@@ -14,17 +14,17 @@ Applications Used:
 - [x] Ui kits, Bootstrap, NodeJS, etc
 
 
-### OnTilt | *Homepage* |
+#### OnTilt | *Homepage* |
 ![Image of home](/app/public/css/onTilt_home.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-### OnTilt | *Signup* |
+#### OnTilt | *Signup* |
 ![Image of signup](/app/public/css/onTilt_signup.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-### OnTilt | *Login* |
+#### OnTilt | *Login* |
 ![Image of login](/app/public/css/onTilt_login.png)
 
 
