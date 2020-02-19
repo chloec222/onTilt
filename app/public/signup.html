@@ -144,6 +144,32 @@
 </div>
 
 
+  <footer class="mt-5 mb-5">
+    <nav class="text-center mt-5">
+            <a class="navbar-brand text-dark" href="index.html" id="logo" style="font-size: 1.5em;">OnTilt &copy;</a>
+    </nav>
+</footer>
+  
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>
 
   <footer class="mt-5 mb-5">
     <nav class="text-center mt-5">
