@@ -20,12 +20,12 @@ Applications Used:
 --------------------------------------------------------------------------------------------------------------------------------------
 
 #### OnTilt | *Signup* |
-![Image of signup](/app/public/css/onTilt_signup.png)
+![Image of signup](/app/public/css/OnTilt_signup.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
 #### OnTilt | *Login* |
-![Image of login](/app/public/css/onTilt_login.png)
+![Image of login](/app/public/css/OnTilt_login.png)
 
 
 
