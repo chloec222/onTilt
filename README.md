@@ -9,9 +9,9 @@ OnTilt is a Sport Betting App. The app allows a user to make a bid on a selected
 - Spencer Mogil (https://github.com/smogil12)
 
 Applications Used:
-- [x] mySQL Server & Workbench
-- [x] mySQl, Express, Express-handlebars, Body-parser, etc
-- [x] Ui kits, Bootstrap, NodeJS, etc
+- [x] Sports DB API
+- [x] mySQl, Express, Express-handlebars, Body-parser, Sequelize
+- [x] UI kits, Bootstrap
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
