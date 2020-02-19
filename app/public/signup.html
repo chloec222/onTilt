@@ -4,75 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/reset.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One|Russo+One|Titillium+Web&display=swap" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <title>onTilt</title>
 </head>
 
 <body>
 
-
-<!-- this is jumbotron section -->
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">OnTilt</h1>
-      <p class="lead">Bet, Set, Go</p>
-    </div>
-  </div>
-
-<!-- this is navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light rounded-0">
-    <a class="navbar-brand" href="index.html"><img src="" width="30" height="30" alt="">OnTilt</a>
+<nav class="navbar navbar-expand-lg navbar-light static-top" >
+    <a class="navbar-brand" id="sm_logo" href="index.html">OnTilt</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse text-light" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span> </a>
-                </li>
+                <!-- <li class="nav-item active">
+                    <a class="nav-link text-light" >Home<span class="sr-only">(current)</span> </a>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="projects.html">My Dashboard</a>
+                    <a class="nav-link text-light" href="dashboard.html">Dashboard</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
+                    <a class="nav-link dropdown-toggle text-light" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="account.html">Profile</a>
-                        <a class="dropdown-item" href="account.html">Settings</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="account.html">Contact Us</a>
+                        <a class="dropdown-item" href="games.html">Basketball</a>
+                        <a class="dropdown-item" href="games.html">Football</a>
+                        <a class="dropdown-item" href="games.html">Soccer</a>
+                        <a class="dropdown-item" href="games.html">Baseball</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="games.html">All Sports</a>
                     </div>
                 </li>
             </ul>
 
             <ul class="nav inline my-2 my-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="signup.html" target="_blank" rel="noopener" rel="noreferrer">Sign Up</a>
+                    <a class="nav-link active text-light" href="signup.html" target="_blank" rel="noopener" rel="noreferrer">Sign Up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html" target="_blank" rel="noopener" rel="noreferrer">Log In</a>
+                    <a class="nav-link text-light" href="login.html" target="_blank" rel="noopener" rel="noreferrer">Log In</a>
                 </li>
             </ul>
         </div>
-</nav>
-
-<!-- section -->
+</nav> 
 
 
+<!-- signup form -->
+<div class="container text-center pt-5 ">
+  <h3>Sign up to start placing bids on your favorite teams.</h3>
+  <h5>Already have an OnTilt account? <span><a href="login.html"> Log In.</a></span></h5>
 
-<footer class="mt-5 mb-5">
+<form class="needs-validation" novalidate>
+
+  <!-- name -->
+  <div class="form-row pt-5">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom01">First Name</label>
+      <input type="text" class="form-control" id="validationCustom01" value="First Name" required>
+      <div class="valid-feedback">
+        Valid.
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom02">Last name</label>
+      <input type="text" class="form-control" id="validationCustom02" value="Last Name" required>
+      <div class="valid-feedback">
+        Valid.
+      </div>
+    </div>
+  </div>
+
+  <!-- username & password -->
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustomEmail">Email</label>
+      <div class="input-group">
+        <!-- <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+        </div> -->
+        <input type="email" class="form-control" id="validationCustomEmail" aria-describedby="inputGroupPrepend"  value="Email" required>
+        <div class="invalid-feedback">
+          Please enter in a valid email.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="inputPassword5">Password</label>
+        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+        <small id="passwordHelpBlock" class="form-text text-muted">
+          Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+        </small>
+    </div>
+  </div>
+
+  <!--address -->
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">City</label>
+      <input type="text" class="form-control" id="validationCustom03" value=" City" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom04">State</label>
+      <select class="custom-select" id="validationCustom04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>...</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom05">Zip Code</label>
+      <input type="text" class="form-control" id="validationCustom05" value="Zip" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip code.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group pt-5">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        I agree to the Terms of Use and the Privacy Policy and confirm that I am at least 18 years of age. Must be 21 years of age to place bids in certain states. 
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary mt-3" type="submit">SUBMIT FORM</button>
+</form>
+</div>
+
+
+
+  <footer class="mt-5 mb-5">
     <nav class="text-center mt-5">
-            <a class="navbar-brand" href="index.html"><img src="" width="30" height="30" alt="">OnTilt &copy;</a>
+            <a class="navbar-brand text-dark" href="index.html" id="logo" style="font-size: 1.5em;">OnTilt &copy;</a>
     </nav>
 </footer>
+  
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>
 
 
-
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -4,75 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/reset.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One|Russo+One|Titillium+Web&display=swap" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <title>onTilt</title>
 </head>
 
 <body>
 
-
-<!-- this is jumbotron section -->
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">OnTilt</h1>
-      <p class="lead">Bet, Set, Go</p>
-    </div>
-  </div>
-
-<!-- this is navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light rounded-0">
-    <a class="navbar-brand" href="index.html"><img src="" width="30" height="30" alt="">OnTilt</a>
+<nav class="navbar navbar-expand-lg navbar-light static-top" >
+    <a class="navbar-brand" id="sm_logo" href="index.html">OnTilt</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse text-light" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span> </a>
-                </li>
+                <!-- <li class="nav-item active">
+                    <a class="nav-link text-light" >Home<span class="sr-only">(current)</span> </a>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="projects.html">My Dashboard</a>
+                    <a class="nav-link text-light" href="dashboard.html">Dashboard</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
+                    <a class="nav-link dropdown-toggle text-light" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="account.html">Profile</a>
-                        <a class="dropdown-item" href="account.html">Settings</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="account.html">Contact Us</a>
+                        <a class="dropdown-item" href="games.html">Basketball</a>
+                        <a class="dropdown-item" href="games.html">Football</a>
+                        <a class="dropdown-item" href="games.html">Soccer</a>
+                        <a class="dropdown-item" href="games.html">Baseball</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="games.html">All Sports</a>
                     </div>
                 </li>
             </ul>
 
             <ul class="nav inline my-2 my-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="signup.html" target="_blank" rel="noopener" rel="noreferrer">Sign Up</a>
+                    <a class="nav-link active text-light" href="signup.html" target="_blank" rel="noopener" rel="noreferrer">Sign Up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html" target="_blank" rel="noopener" rel="noreferrer">Log In</a>
+                    <a class="nav-link text-light" href="login.html" target="_blank" rel="noopener" rel="noreferrer">Log In</a>
                 </li>
             </ul>
         </div>
-</nav>
+</nav> 
 
-<!-- section -->
+<!-- this is jumbotron section -->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <div class="container-background"></div>
+        <div class="content">
 
+        <p class="lead" id="motto">Bet. Set. Get Edge. </p>
+        <p id="slogan">Sign up today and start bidding.<br />
+        <span id="logo_md">OnTilt</span>, where responsible gaming happens.</p>
+        <a class="btn btn-outline-light btn-lg" href="dashboard.html" role="button">PLACE A BET NOW</a>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- this is homepage -->
 
 
 <footer class="mt-5 mb-5">
     <nav class="text-center mt-5">
-            <a class="navbar-brand" href="index.html"><img src="" width="30" height="30" alt="">OnTilt &copy;</a>
+            <a class="navbar-brand text-dark" href="index.html" id="logo" style="font-size: 1.5em;">OnTilt &copy;</a>
     </nav>
 </footer>
 
 
-
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
