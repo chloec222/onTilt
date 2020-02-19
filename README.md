@@ -28,7 +28,3 @@ Applications Used:
 #### OnTilt | *Login* |
 ![Image of login](/app/public/css/OnTilt_login.png)
 
-
-
-
-
