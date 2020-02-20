@@ -66,6 +66,7 @@ body{
   background-color: rgb(247, 247, 247);
   font-size: 1em;
   position: relative;
+  padding-bottom: 100em;
 }
 
 .jumbotron{
@@ -164,4 +165,38 @@ body{
    padding-top:1em;
  }
 
- 
+#loginWidth{
+  max-width:max-content;
+} 
+
+.chart-container{
+  /* position: relative; */
+  height:60vh;
+  width:60vw;
+  overflow-y: scroll;
+}
+
+#acctUl{
+  margin: 2em 0;
+}
+
+.acctList{
+  margin: 2em 0;
+  font-weight: 600;
+  margin-left: 1em;
+}
+
+.card-img-top{
+  max-width: 15em;
+  margin:auto;
+  margin-top:1em;
+}
+
+.card{
+  max-width: 30em;
+}
+
+#goldStar{
+  width:2em;
+  height:auto;
+}

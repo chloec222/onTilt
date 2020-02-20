@@ -20,9 +20,6 @@
 
         <div class="collapse navbar-collapse text-light" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <!-- <li class="nav-item active">
-                    <a class="nav-link text-light" >Home<span class="sr-only">(current)</span> </a>
-                </li> -->
                 <li class="nav-item">
                     <a class="nav-link text-light" href="dashboard.html">Dashboard</a>
                 </li>
@@ -51,7 +48,7 @@
 </nav> 
 
 <!-- this is login section -->
-<div class="container text-center pt-5 ">
+<div class="container text-center pt-5" id="loginWidth">
     <h3>Log in using your existing OnTilt account.</h3>
     <h5>Don't have an OnTilt account? <span><a href="signup.html"> Sign up.</a></span></h5>
     <form>
@@ -68,7 +65,6 @@
       </div>
     </div>
     
-    </fieldset>
     <div class="form-group row text-left">
       <div class="col-sm-2"></div>
       <div class="col-sm-10">
@@ -84,18 +80,18 @@
       <div class="col-sm-10">
         <button type="submit" class="btn btn-primary">SIGN IN</button>
         <h6 id="forgotPWLink"><a href="#">Forgot password?</a></h6>
-        
       </div>
     </div>
   </form>
 </div>
 
 
-<footer class="mt-5 mb-5">
-    <nav class="text-center mt-5">
-            <a class="navbar-brand text-dark" href="index.html" id="logo" style="font-size: 1.5em;">OnTilt &copy;</a>
-    </nav>
-</footer>
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <a class="navbar-brand text-dark " href="index.html" id="logo" style="font-size: 1.5em; margin:auto">OnTilt &copy;</a>
+</nav>
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
