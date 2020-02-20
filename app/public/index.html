@@ -7,7 +7,7 @@
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Faster+One|Russo+One|Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One|Russo+One|Quicksand|Titillium+Web&display=swap" rel="stylesheet">
 
     <!-- myCSS -->
     <link href="css/style.css" type="text/css" rel="stylesheet">
@@ -60,14 +60,17 @@
         <p class="lead" id="motto">Bet. Set. Get Edge. </p>
         <p id="slogan">Sign up today and start bidding.<br />
         <span id="logo_md">OnTilt</span>, where responsible gaming happens.</p>
-        <a class="btn btn-outline-light btn-lg" href="dashboard.html" role="button">PLACE A BID</a>
+        <a class="btn btn-outline-light btn-lg" id="mainBtn" href="games.html" role="button">PLACE A BID</a>
         </div>
         </div>
     </div>
 </div>
 
 <!-- all sports navbar -->
-<ul class="nav">
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand"></a>
+
+  <ul class="nav">
     <li class="nav-item">
       <a class="nav-link active" href="games.html">Basketball</a>
     </li>
@@ -81,30 +84,101 @@
         <a class="nav-link" href="games.html">Soccer</a>
       </li>
     <li class="nav-item">
-      <a class="nav-link disabled" href="games.html" tabindex="-1" aria-disabled="true">All Sports</a>
+      <a class="nav-link" href="games.html">All Sports</a>
     </li>
   </ul>
 
+  <form class="form-inline">
+    <input class="form-control rounded-pill px-4 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-primary rounded-pill px-4 my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+<!-- bid card section -->
+    <div class="container ">
+      <div class="row mt-5">
+        <div class="col">
+          <div class="card rounded border-0 rounded-lg" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title bg-light text-dark">Today's Bids</h5>
+                <h6 class="card-subtitle mb-2">TEAM ABC: $100</h6>
+                <p class="card-text"></p>
+                <a href="dashboard.html" class="card-link">Dashboard</a>
+                <a href="games.html" class="card-link">Games</a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title bg-light text-dark">Previous Bids</h5>
+                <h6 class="card-subtitle mb-2">TEAM DEG: $75</h6>
+                <p class="card-text"></p>
+                <a href="dashboard.html" class="card-link">Dashboard</a>
+                <a href="games.html" class="card-link">Games</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    <!-- </div> -->
+
   
 <!-- this is featured section -->
-
-
-        <div class="col-3">
-            <div class="card rounded border-0" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Your Bids</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Today's Bids</h6>
-                  <p class="card-text"></p>
-                  <a href="dashboard.html" class="card-link">Dashboard</a>
-                  <a href="games.html" class="card-link">Games</a>
-                </div>
-              </div>
+    <!-- <div class="container"> -->
+      <div class="row mt-5">
+        <div class="col">
+          <h5>FEATURED <hr/></h5>
         </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card-deck">
+
+            <!-- feature 1 -->
+            <div class="card border-0 rounded-lg">
+              <div class="card-body border-0 rounded-lg">
+                <h5 class="card-title bg-light text-center text-dark">Highlight event</h5>
+                
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQjsJgcCxSP1oU2BL9W_aIVpUGvp2LKBFBSlRza1V2bEYxl7SbO" class="card-img-top" id="featPic1" alt="...">
+                <p class="card-text text-center mt-1">New York: 2-20-20</p>
+              </div>
+              <div class="card-footer border-0 rounded-lg">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+
+            <!-- feature 2 -->
+            <div class="card border-0 rounded-lg">
+              <div class="card-body border-0 rounded-lg">
+                <h5 class="card-title bg-light text-center text-dark">Highlight event</h5>
+                
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQjsJgcCxSP1oU2BL9W_aIVpUGvp2LKBFBSlRza1V2bEYxl7SbO" class="card-img-top" id="featPic2" alt="...">
+                <p class="card-text text-center mt-1">New York: 2-20-20</p>
+              </div>
+              <div class="card-footer border-0 rounded-lg">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+
+            <!-- feature 3 -->
+            <div class="card border-0 rounded-lg">
+              <div class="card-body border-0 rounded-lg">
+                <h5 class="card-title bg-light text-center text-dark">Highlight event</h5>
+                
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQjsJgcCxSP1oU2BL9W_aIVpUGvp2LKBFBSlRza1V2bEYxl7SbO" class="card-img-top" id="featPic3" alt="...">
+                <p class="card-text text-center mt-1">New York: 2-20-20</p>
+              </div>
+              <div class="card-footer border-0 rounded-lg">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+
+
 
 <nav class="navbar fixed-bottom navbar-light bg-light">
-  <a class="navbar-brand text-dark " href="index.html" id="logo" style="font-size: 1.5em; margin:auto">OnTilt &copy;</a>
+  <a class="navbar-brand text-muted" href="index.html" id="logo" style="font-size: 1em; margin:auto">OnTilt &copy;</a>
 </nav>
 
 
