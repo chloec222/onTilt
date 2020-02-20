@@ -2,9 +2,9 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
         datasets: [{
-            label: '# of Votes',
+            label: '# of BIDs',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -35,33 +35,5 @@ var myChart = new Chart(ctx, {
         }
     }
 });
-
-
-
-
-
-
-
-// var ctx = document.getElementById('myChart').getContext('2d');
-// var chart = new Chart(ctx, {
-//     // The type of chart we want to create
-//     type: 'line',
-
-//     // The data for our dataset
-//     data: {
-//         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-//         datasets: [{
-//             label: 'My First dataset',
-//             backgroundColor: 'rgb(125, 125, 132)',
-//             borderColor: 'rgb(57,23,150)',
-//             data: [0, 10, 5, 2, 20, 30, 45]
-//         }]
-//     },
-
-//     // Configuration options go here
-//     options: {}   
-// });
-    
-
 
 
