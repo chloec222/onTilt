@@ -9,7 +9,7 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"> -->
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Faster+One|Russo+One|Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One|Russo+One|Quicksand|Titillium+Web&display=swap" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <title>onTilt</title>
 </head>
@@ -77,18 +77,20 @@
 
     <!-- profile -->
             <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-              <div class="card shadow p-3 mb-5 bg-white rounded rounded-lg mt-2">
-                <img src="css\person-placeholder.png" class="card-img-top" alt="...">
+              <div class="card shadow-sm p-3 mb-5 bg-white rounded rounded-lg mt-2">
+                <h5><b>PROFILE</b></h5>
+                <h6>ACCOUNT</h6>
+                <img src="css\person-placeholder.png" class="card-img-top rounded" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title"> <b>PROFILE</b></h5>
-                  <p class="card-text">@johndoe123</p>
+                  <h5 class="card-title"></h5>
+                  <p class="card-text"></p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Name:  John Doe</li>
-                  <li class="list-group-item">Username: johndoe123</li>
-                  <li class="list-group-item">Email:  johndoe123@gmail.cpm </li>
+                  <li class="list-group-item border-0">Name:  John Doe</li>
+                  <li class="list-group-item border-0">Username: johndoe123</li>
+                  <li class="list-group-item border-0">Email:  johndoe123@gmail.cpm </li>
                 </ul>
-                <div class="card-body">
+                <div class="card-body text-center">
                   <a href="#" class="card-link">Fackbook link</a>
                   <a href="#" class="card-link">Twitter link</a>
                   <a href="#" class="card-link">Instagram link</a>
@@ -98,82 +100,94 @@
 
     <!-- my bids -->
             <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              <h5><b>MY BIDS</b></h5>
+              <h6>BIDS DATABASE</h6>
 
-              <!-- this is bids table section -->
-                    <div class="table table-responsive{-sm|-md|-lg|-xl}">
-                    <table class="table table-hover">
-                    <h5><b>MY BIDS</b></h5>
-                    <h6>BIDS DATABASE</h6>
-                    <div class="table table-responsive{-sm|-md|-lg|-xl}"></div>
-                    <table class="table table-hover">
-                      <thead class="thead-dark">
-                        <tr>
-                          <th scope="col">ID</th>
-                          <th scope="col">BID AMT</th>
-                          <th scope="col">BID DATE</th>
-                          <th scope="col">BID TEAM</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>$500</td>
-                          <td>2-22-20</td>
-                          <td>AA Team</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>$500</td>
-                          <td>2-22-20</td>
-                          <td>AA Team</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>$500</td>
-                          <td>2-22-20</td>
-                          <td>AA Team</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    
-                    <table class="table table-hover">
-                      <thead class="thead-light">
-                        <tr>
-                          <th scope="col">ID</th>
-                          <th scope="col">BID AMT</th>
-                          <th scope="col">BID DATE</th>
-                          <th scope="col">BID TEAM</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>$100</td>
-                          <td>1-11-20</td>
-                          <td>BB Team</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>$100</td>
-                          <td>1-11-20</td>
-                          <td>BB Team</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>$100</td>
-                          <td>1-11-20</td>
-                          <td>BB Team</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+              <nav class="navbar navbar-light bg-light float-right">
+                <form class="form-inline">
+                  <input class="form-control rounded-pill px-4 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn btn-primary rounded-pill px-4 my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </nav>
+
+              <div class="table table-responsive{-sm|-md|-lg|-xl}">
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">BID AMT</th>
+                    <th scope="col">BID DATE</th>
+                    <th scope="col">BID TEAM</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>$500</td>
+                    <td>2-22-20</td>
+                    <td>AA Team</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>$500</td>
+                    <td>2-22-20</td>
+                    <td>AA Team</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>$500</td>
+                    <td>2-22-20</td>
+                    <td>AA Team</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="table table-hover">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">BID AMT</th>
+                    <th scope="col">BID DATE</th>
+                    <th scope="col">BID TEAM</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>$100</td>
+                    <td>1-11-20</td>
+                    <td>BB Team</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>$100</td>
+                    <td>1-11-20</td>
+                    <td>BB Team</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>$100</td>
+                    <td>1-11-20</td>
+                    <td>BB Team</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
                     
 
     <!-- my games -->
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
               <h5><b>MY PLAYBOOK</b></h5>
               <h6>GAMES DATABASE</h6>
+
+              <nav class="navbar navbar-light bg-light float-right">
+                <form class="form-inline">
+                  <input class="form-control rounded-pill px-4 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn btn-primary rounded-pill px-4 my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </nav>
+
               <div class="table table-responsive{-sm|-md|-lg|-xl}">
               <table class="table table-hover">
                 <thead class="thead-dark">
@@ -251,7 +265,7 @@
     <!-- settings -->
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
               <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                <div class="card shadow p-3 mb-5 bg-white rounded rounded-lg mt-2">
+                <div class="card shadow-sm p-3 mb-5 bg-white rounded rounded-lg mt-2">
                   
                   <div class="card-body">
                     <h5><b>SETTINGS</b></h5>
@@ -266,17 +280,14 @@
                 </div>
               </div>
             </div>
-      </div>
-    </div>
   </div>
 </div>
 
 
-  
 
 
 <nav class="navbar fixed-bottom navbar-light bg-light">
-  <a class="navbar-brand text-dark " href="index.html" id="logo" style="font-size: 1.5em; margin:auto">OnTilt &copy;</a>
+  <a class="navbar-brand text-muted" href="index.html" id="logo" style="font-size: 1em; margin:auto">OnTilt &copy;</a>
 </nav>
 
 
