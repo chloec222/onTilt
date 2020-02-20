@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/reset.css" type="text/css" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"> -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Faster+One|Russo+One|Titillium+Web&display=swap" rel="stylesheet">
-
-    <!-- new tech:UI Kit -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
-    <link rel="stylesheet" href="/app/public/css/userdash.css" />
-
-    <!-- myCSS -->
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <title>onTilt</title>
 </head>
@@ -28,9 +24,6 @@
 
         <div class="collapse navbar-collapse text-light" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <!-- <li class="nav-item active">
-                    <a class="nav-link text-light" >Home<span class="sr-only">(current)</span> </a>
-                </li> -->
                 <li class="nav-item">
                     <a class="nav-link text-light" href="dashboard.html">Dashboard</a>
                 </li>
@@ -58,46 +51,244 @@
         </div>
 </nav> 
 
-<!-- this is dashboard section -->
-    <div class=" uk-child-width-1-3@m uk-grid-small uk-grid-match uk-padding" uk-grid>
-      <div>
-        <div class="uk-animation-toggle" tabindex="0">
-          <div class="uk-card uk-card-default uk-card-body uk-animation-fade">
-            <h3 class="uk-card-title">Username:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+
+<!-- user dashboard -->
+<div class="container" id="dashboard">
+  <div class="row">
+    <div class="col mt-5">
+          <div class="nav flex-column nav-pills mx-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            
+            <a class="nav-link active text-light bg-dark my-2 text-center" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="true">PROFILE</a>
+
+            <a class="nav-link text-light bg-dark my-2 text-center" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="false">MY BIDS</a>
+
+            <a class="nav-link text-light bg-dark my-2 text-center" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">MY PLAYBOOK</a>
+            
+            <a class="nav-link text-light bg-dark my-2 text-center" id="v-pills-analytics-tab" data-toggle="pill" href="#v-pills-analytics" role="tab" aria-controls="v-pills-analytics" aria-selected="false">ANALYTICS</a>
+
+            <a class="nav-link text-light bg-dark my-2 text-center" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">SETTINGS</a>
           </div>
-        </div>
-      </div>
-      <div>
-        <div class="uk-animation-toggle" tabindex="0">
-          <div class="uk-card uk-card-primary uk-card-body uk-animation-fade">
-            <h3 class="uk-card-title">Upcoming Bets</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+
+    <!-- tab content -->
+        <div class="col-9 mt-5">
+          <div class="tab-content" id="v-pills-tabContent">
+
+    <!-- profile -->
+            <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+              <div class="card shadow p-3 mb-5 bg-white rounded rounded-lg mt-2">
+                <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> <b>PROFILE</b></h5>
+                  <p class="card-text">@johndoe123</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Name:  John Doe</li>
+                  <li class="list-group-item">Username: johndoe123</li>
+                  <li class="list-group-item">Email:  johndoe123@gmail.cpm </li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Fackbook link</a>
+                  <a href="#" class="card-link">Twitter link</a>
+                  <a href="#" class="card-link">Instagram link</a>
+                </div>
+              </div>
+            </div>
+
+    <!-- my bids -->
+            <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+              <!-- this is bids table section -->
+                    <div class="table table-responsive{-sm|-md|-lg|-xl}">
+                    <table class="table table-hover">
+                    <h5><b>MY BIDS</b></h5>
+                    <h6>BIDS DATABASE</h6>
+                    <div class="table table-responsive{-sm|-md|-lg|-xl}"></div>
+                    <table class="table table-hover">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th scope="col">Handle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    
+                    <table class="table">
+                      <thead class="thead-light">
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th scope="col">Handle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                    
+
+    <!-- my games -->
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+              <h5><b>MY PLAYBOOK</b></h5>
+              <h6>GAMES DATABASE</h6>
+              <div class="table table-responsive{-sm|-md|-lg|-xl}">
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-      </div>
-      <div>
-        <div class="uk-animation-toggle" tabindex="0">
-          <div class="uk-card uk-card-secondary uk-card-body uk-animation-fade">
-            <h3 class="uk-card-title">Past Bets</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </div>
+
+    <!-- analytics -->
+            <div class="tab-pane fade" id="v-pills-analytics" role="tabpanel" aria-labelledby="v-pills-analytics-tab">
+              <h5><b>ANALYTICS</b></h5>
+              <h6>MONTHLY BIDDING TREND</h6>
+                <div class="chart-container">
+                  <canvas id="myChart"></canvas>
+                </div>
+            </div>
+
+    <!-- settings -->
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+              <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                <div class="card shadow p-3 mb-5 bg-white rounded rounded-lg mt-2">
+                  
+                  <div class="card-body">
+                    <h5><b>SETTINGS</b></h5>
+                    <h6>USER ACCOUNT SETTINGS</h6>
+                  </div>
+                  
+                  <ul id="acctUl">
+                    <li class="acctList"><a href="#">EDIT/UPDATE PROFILE</a></li>
+                    <li class="acctList"><a href="#">EDIT/UPDATE ACCOUNT</a></li>
+                    <li class="acctList"><a href="#">EDIT/UPDATE PAYMENT</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
       </div>
     </div>
-    <div id="games"></div>
+  </div>
+</div>
 
 
-<footer class="mt-5 mb-5">
-    <nav class="text-center mt-5">
-            <a class="navbar-brand text-dark" href="index.html" id="logo" style="font-size: 1.5em;">OnTilt &copy;</a>
-    </nav>
-</footer>
+  
 
 
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <a class="navbar-brand text-dark " href="index.html" id="logo" style="font-size: 1.5em; margin:auto">OnTilt &copy;</a>
+</nav>
+
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<!-- Bootstrap script -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="userdash.js"></script>
+
+
+<script src="js/dashboard_layout.js"></script>
 </body>
 </html>
