@@ -10,10 +10,10 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-app.use(require("./routes/api"));
+app.use(require("./routes/in"));
 
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+// db.sequelize.sync().then(function() {
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
 });
+// });
