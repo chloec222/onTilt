@@ -1,19 +1,13 @@
-const sequelize = require('sequelize')
-const connection = require('../config/index');
+module.exports = function(sequelize, DataTypes) {
+  var User = sequelize.define("User", {
+    name: DataTypes.STRING
+  });
 
-let User = connection.define("User", {
-    username: sequelize.STRING,
-    password: sequelize.STRING,
-    name: sequelize.STRING,
-    age: {
-      type: sequelize.INTEGER,
-      allowNull: false,
-      len: [1, 2]
-    },
-    location: sequelize.STRING,
-    style: sequelize.INTEGER,
-    platform: sequelize.INTEGER
-  })
+  User.associate = function(models) {
+    User.hasMany(models.Bet, {
+      onDelete: "cascade"
+    });
+  };
 
-  
-module.exports = User;
+  return User;
+};

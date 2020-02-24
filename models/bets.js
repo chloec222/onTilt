@@ -6,8 +6,14 @@ module.exports = function(sequelize, DataTypes) {
     userPick: DataTypes.String,
     allowNull: false
   });
+
+  Bet.associate = function(models) {
+    Bet.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
   return Bet;
 };
-// Bet.sync();
-
-module.exports = Bet;
