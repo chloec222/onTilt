@@ -1,5 +1,8 @@
+// =========================EXPRESS SERVER/ROUTE CALL CODE====================================
+// telling node we are creating express server
 var express = require("express");
 var app = express();
+
 
 
 
@@ -49,16 +52,78 @@ var games = [
 
 // setting initial port or port 8080
 var PORT = process.env.PORT || 8080;
+=======
 
+
+
+
+// =========================HANDLEBARS SERVER/ROUTE CALL CODE====================================
+// require handlebars
+var exphbs = require('express-handlebars');
+// Use "main" as our default layout
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+// Use handlebars to render
+app.set('view engine', 'handlebars');
+
+// test server with home.handlebars
+// Handlebars: Render the "home" layout for the main page and send the following msg
+app.get('/', (req, res) => {
+  res.render('home', { games: games });
+})
+
+var games = [
+  { title: "Game 1: ", desc: "ABC vs. DEG", imgUrl: "public\css\images\person-placeholder.png" },
+  { title: "Game 2: ", desc: "ABC vs. DEG", imgUrl: "public\css\images\person-placeholder.png" },
+  { title: "Game 3: ", desc: "ABC vs. DEG", imgUrl: "public\css\images\person-placeholder.png" }
+]
+
+// --not working => debug later
+// --games.handlebars => index
+// app.get('/', (req, res) => {
+//   res.render('games-index', { games: games });
+// })
+
+
+// =========================CSS ROUTE CALL CODE====================================
+
+// not working => debug later
+// For serving of static CSS
+// app.use('/', express.static(path.join(__dirname + "/public")));
+
+// test server
+// Tell our app to send the "hello world" message to our home page
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+// =========================API ROUTE CALLS CODE====================================
+
+
+// not working => debug later
+// telling express server where the API routes are located and act as a map that users will interact with when on app
+// require("./routes/api/bets.js")(app); 
+// require("./routes/api/html.js")(app); 
+// require("./routes/api/index.js")(app); 
+// require("./routes/api/users.js")(app); 
+// require("./routes/routes.js")(app);
+
+
+// =================================================================================
+
+
+
+// setting initial port or port 8080
+var PORT = process.env.PORT || 8080;
 var db = require("./models");
 
+
+// express makes it possible for server to interpret the submitted data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 app.use(express.static("public"));
+// app.use(require('./routes'));
 
 // db.sequelize.sync().then(function() {
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
-// });

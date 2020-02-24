@@ -170,13 +170,6 @@ body{
   max-width:max-content;
 } 
 
-.chart-container{
-  /* position: relative; */
-  height:60vh;
-  width:60vw;
-  overflow-y: scroll;
-}
-
 #acctUl{
   margin: 2em 0;
 }
@@ -187,15 +180,9 @@ body{
   margin-left: 1em;
 }
 
-.card-img-top{
-  max-width: 13em;
-  margin:auto;
-  margin-top:1em;
-  box-shadow: 0 1px 5px 3px rgb(236, 236, 236);
-}
 
 .card{
-  max-width: 35em;
+  max-width:35em;
 }
 
 .card-title{
