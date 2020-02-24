@@ -1,0 +1,28 @@
+{{!-- main base template: views/layouts/main.handlebars --}}
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+{{> head}}
+    <title>OnTilt</title>
+</head>
+
+
+<body>
+{{> navbar}}
+
+{{>jumbotron}}
+
+    <div class="container">
+        {{{body}}}
+    </div>
+
+
+{{> footer}}
+
+
+{{>script}}
+</body>
+
+</html>
