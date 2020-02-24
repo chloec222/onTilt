@@ -46,44 +46,6 @@ var games = [
 // require("./routes/routes.js")(app);
 
 
-// =================================================================================
-
-
-
-// setting initial port or port 8080
-var PORT = process.env.PORT || 8080;
-=======
-
-
-
-
-// =========================HANDLEBARS SERVER/ROUTE CALL CODE====================================
-// require handlebars
-var exphbs = require('express-handlebars');
-// Use "main" as our default layout
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-// Use handlebars to render
-app.set('view engine', 'handlebars');
-
-// test server with home.handlebars
-// Handlebars: Render the "home" layout for the main page and send the following msg
-app.get('/', (req, res) => {
-  res.render('home', { games: games });
-})
-
-var games = [
-  { title: "Game 1: ", desc: "ABC vs. DEG", imgUrl: "public\css\images\person-placeholder.png" },
-  { title: "Game 2: ", desc: "ABC vs. DEG", imgUrl: "public\css\images\person-placeholder.png" },
-  { title: "Game 3: ", desc: "ABC vs. DEG", imgUrl: "public\css\images\person-placeholder.png" }
-]
-
-// --[DEBUG]
-// --games.handlebars => index
-// app.get('/', (req, res) => {
-//   res.render('games-index', { games: games });
-// })
-
-
 // =========================CSS ROUTE CALL CODE====================================
 
 // Tell our app to send the "hello world" message to our home page
@@ -104,7 +66,6 @@ app.get('/', (req, res) => {
 
 
 // =================================================================================
-
 
 
 // setting initial port or port 8080
