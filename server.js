@@ -77,7 +77,7 @@ var games = [
   { title: "Game 3: ", desc: "ABC vs. DEG", imgUrl: "public\css\images\person-placeholder.png" }
 ]
 
-// --not working => debug later
+// --[DEBUG]
 // --games.handlebars => index
 // app.get('/', (req, res) => {
 //   res.render('games-index', { games: games });
@@ -86,11 +86,6 @@ var games = [
 
 // =========================CSS ROUTE CALL CODE====================================
 
-// not working => debug later
-// For serving of static CSS
-// app.use('/', express.static(path.join(__dirname + "/public")));
-
-// test server
 // Tell our app to send the "hello world" message to our home page
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -99,7 +94,7 @@ app.get('/', (req, res) => {
 // =========================API ROUTE CALLS CODE====================================
 
 
-// not working => debug later
+// [DEBUG]
 // telling express server where the API routes are located and act as a map that users will interact with when on app
 // require("./routes/api/bets.js")(app); 
 // require("./routes/api/html.js")(app); 
