@@ -18,15 +18,15 @@ Applications Used:
 --------------------------------------------------------------------------------------------------------------------------------------
 
 #### OnTilt | *Homepage* |
-![Image of home](/app/public/css/onTilt_home.png)
+![Image of home](/public/css/images/onTilt_home.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
 #### OnTilt | *Signup* |
-![Image of signup](/app/public/css/OnTilt_signup.png)
+![Image of signup](/public/css/images/OnTilt_signup.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
 #### OnTilt | *Login* |
-![Image of login](/app/public/css/OnTilt_login.png)
+![Image of login](/public/css/images/OnTilt_login.png)
 
