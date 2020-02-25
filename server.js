@@ -2,7 +2,10 @@
 // telling node we are creating express server
 var express = require("express");
 var app = express();
-
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
+// parse application/json
+app.use(bodyParser.json());
 // =========================HANDLEBARS SERVER/ROUTE CALL CODE====================================
 // require handlebars
 var exphbs = require("express-handlebars");
@@ -77,6 +80,7 @@ app.get("/", (req, res) => {
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
 require("./routes/bets")(app);
+require("./routes/users")(app);
 
 // express makes it possible for server to interpret the submitted data
 app.use(express.urlencoded({ extended: true }));
