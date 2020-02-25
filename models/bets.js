@@ -3,17 +3,24 @@
 
 module.exports = function(sequelize, DataTypes) {
   const Bet = sequelize.define("Bet", {
-    userPick: DataTypes.String,
-    allowNull: false
-  });
-
-  Bet.associate = function(models) {
-    Bet.belongsTo(models.User, {
-      foreignKey: {
-        allowNull: false
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
       }
-    });
-  };
-
+    },
+    body: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    category: {
+      type: DataTypes.STRING,
+      defaultValue: "Personal"
+    }
+  });
   return Bet;
 };
