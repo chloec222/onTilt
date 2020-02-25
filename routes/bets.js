@@ -25,4 +25,11 @@ module.exports = function(app) {
       res.json(dbBet);
     });
   });
+  app.post("/api/bets", function(req, res) {
+    // Create an Author with the data available to us in req.body
+    console.log(req.body);
+    db.Bet.create(req.body).then(function(dbBet) {
+      res.json(dbBet);
+    });
+  });
 };
