@@ -3,16 +3,13 @@
 var express = require("express");
 var app = express();
 
-
-
-
 // =========================HANDLEBARS SERVER/ROUTE CALL CODE====================================
 // require handlebars
-var exphbs = require('express-handlebars');
+var exphbs = require("express-handlebars");
 // Use "main" as our default layout
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 // Use handlebars to render
-app.set('view engine', 'handlebars');
+app.set("view engine", "handlebars");
 
 
 var games = [
@@ -59,42 +56,37 @@ app.post('/playbook', (req, res) => {
 })
 // =========================API ROUTE CALLS CODE====================================
 
-
 // [DEBUG]
 // telling express server where the API routes are located and act as a map that users will interact with when on app
-// require("./routes/api/bets.js")(app); 
-// require("./routes/api/html.js")(app); 
-// require("./routes/api/index.js")(app); 
-// require("./routes/api/users.js")(app); 
+// require("./routes/api/bets.js")(app);
+// require("./routes/api/html.js")(app);
+// require("./routes/api/index.js")(app);
+// require("./routes/api/users.js")(app);
 // require("./routes/routes.js")(app);
-
 
 // =========================CSS ROUTE CALL CODE====================================
 
 // Tell our app to send the "hello world" message to our home page
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 // =========================API ROUTE CALLS CODE====================================
 
-
 // [DEBUG]
 // telling express server where the API routes are located and act as a map that users will interact with when on app
-// require("./routes/api/bets.js")(app); 
-// require("./routes/api/html.js")(app); 
-// require("./routes/api/index.js")(app); 
-// require("./routes/api/users.js")(app); 
+// require("./routes/api/bets.js")(app);
+// require("./routes/api/html.js")(app);
+// require("./routes/api/index.js")(app);
+// require("./routes/api/users.js")(app);
 // require("./routes/routes.js")(app);
 
-
 // =================================================================================
-
 
 // setting initial port or port 8080
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
-
+require("./routes/bets")(app);
 
 // express makes it possible for server to interpret the submitted data
 app.use(express.urlencoded({ extended: true }));
@@ -102,7 +94,8 @@ app.use(express.json());
 app.use(express.static("public"));
 // app.use(require('./routes'));
 
-// db.sequelize.sync().then(function() {
-app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
