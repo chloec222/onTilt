@@ -14,26 +14,49 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 // Use handlebars to render
 app.set('view engine', 'handlebars');
 
-// test server with home.handlebars
-// Handlebars: Render the "home" layout for the main page and send the following msg
+
+var games = [
+  { title: "Game 1: ", desc: "NBA vs. NBA2", imgUrl: "https://fetalpulse.com/wp-content/uploads/2015/07/NBA-Game-Time1.png" },
+  { title: "Game 2: ", desc: "NBA3 vs. NBA4", imgUrl: "https://blog.us.playstation.com/tachyon/2013/10/nba.jpg?fit=554,341" },
+  { title: "Game 3: ", desc: "NBA5 vs. NBA6", imgUrl: "https://cdn.nba.net/nba-drupal-prod/styles/landscape/s3/2016-09/GT-web-sm.jpg?itok=kNuQGd23" }
+]
+
+
+// Handlebars: 'home.hbs' with '/games' display
 app.get('/', (req, res) => {
   res.render('home', { games: games });
 })
 
-var games = [
-  { title: "Game 1: ", desc: "NBA vs. NBA2", imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRgd_jexdV0iueOz7y2AEYtFLMFOFDhaP9huX2N7qNGaaZn5-d7" },
-  { title: "Game 2: ", desc: "NBA3 vs. NBA4", imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRgd_jexdV0iueOz7y2AEYtFLMFOFDhaP9huX2N7qNGaaZn5-d7" },
-  { title: "Game 3: ", desc: "NBA5 vs. NBA6", imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRgd_jexdV0iueOz7y2AEYtFLMFOFDhaP9huX2N7qNGaaZn5-d7" }
-]
+// Handlebars: 'bid.hbs' for placing a bid on a game
+app.get('/bid', (req, res) => {
+  res.render('bid', {});
+})
 
-// --[DEBUG]
-// --games.handlebars => index
-// app.get('/', (req, res) => {
-//   res.render('games-index', { games: games });
-// })
+// Handlebars: 'game.hbs' for viewing single game
+app.get('/game', (req, res) => {
+  res.render('game', {});
+})
+
+// Handlebars: 'dashboard.hbs' for viewing single game
+app.get('/dashboard', (req, res) => {
+  res.render('dashboard', {});
+})
+
+// Handlebars: 'signup.hbs' for viewing single game
+app.get('/signup', (req, res) => {
+  res.render('signup', {});
+})
+
+// Handlebars: 'login.hbs' for viewing single game
+app.get('/login', (req, res) => {
+  res.render('login', {});
+})
 
 
-
+// Handlebars: 'game.hbs' for viewing all games
+app.post('/playbook', (req, res) => {
+  res.render('playbook', {});
+})
 // =========================API ROUTE CALLS CODE====================================
 
 
