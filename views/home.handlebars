@@ -1,7 +1,7 @@
 {{!-- games-index --}}
   <div class="row mt-4">
       <div class="col-lg-6 offset-lg-3">
-          <h1>Games</h1>
+          <h1>GAMES</h1>
           {{#each games}}
               <div class="card mt-3">
                 <img class="card-img-top" src="{{this.imgUrl}}" alt="Card image cap">
@@ -9,8 +9,8 @@
                   <h5 class="card-title">{{this.title}}</h5>
                   <p class="card-text">{{this.desc}}</p>
                   <div class="text-right">
-                    <a href="/game" class="btn btn-info">View Game</a>
-                    <a href="/bid" class="btn btn-primary">Make a Bid</a>
+                    <a href="/game" class="btn btn-info">VIEW GAME</a>
+                    <a href="/bid" class="btn btn-primary">PLACE BID</a>
                   </div>
                 </div>
               </div>
@@ -19,10 +19,17 @@
       </div>
   </div>
 
-
-
-
-
-
-
-
+  <table id="table">
+            <tr>
+                <th>User ID</th>
+                <th>Selected Game</th>
+                <th>Bid</th>
+            </tr>
+            {{#each userResults}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.game}}</td>
+                <td>{{this.bid}}</td>
+            </tr>
+            {{/each}}
+        </table>

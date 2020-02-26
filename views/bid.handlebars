@@ -1,30 +1,36 @@
 <!-- views/bid.handlebars -->
-<div class="container">
+<div class="container text-center pt-5">
   <div class="row">
-    <div class="col">
+    <div class="col-lg-6 offset-lg-3">
       <form method="POST" action="/">
         <fieldset>
-          <legend>Place Bid</legend>
+          <div class="class="text-center"">
+            <h2>PLACE BID</h2>
+          <legend></legend>
+          </div>
+          <hr />
           <!-- TITLE -->
           <p>
-            <label for="title">Team Name</label><br>
+            <label for="title">TEAM NAME</label><br>
             <input type="text" name="title" />
           </p>
           <p>
-            <label for="desc">Bid Amount</label><br>
+            <label for="desc">BID $</label><br>
             <input type="text" name="desc" />
           </p>
         </fieldset>
 
         <!-- BUTTON -->
         <p>
-          <button type="submit">Place Bid</button>
+          <button type="submit" class="btn btn-primary rounded-pill px-4">PLACE BID</button>
         </p>
           <p>
-          <button type="submit">Go Back</button>
+          <button type="submit" class="btn btn-primary rounded-pill px-4">BACK</button>
         </p>
-
+      
       </form>
     </div>
   </div>
 </div>
+
+

@@ -3,7 +3,9 @@
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({ extended: false }));
+
+// Must appear AFTER var app = express() but before routes
+app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 // =========================HANDLEBARS SERVER/ROUTE CALL CODE====================================
@@ -22,9 +24,29 @@ var games = [
 ]
 
 
+  userResults = [
+  {
+      id: 1,
+      game: 'GAME 1',
+      bid: 80
+  },
+  {
+      id: 2,
+      game: 'GAME 5',
+      bid: 70
+  },
+  {
+      id: 3,
+      game: 'GAME 3',
+      bid: 90
+  }
+]
+
+
+
 // Handlebars: 'home.hbs' with '/games' display
 app.get('/', (req, res) => {
-  res.render('home', { games: games });
+  res.render('home', { games: games});
 })
 
 // Handlebars: 'bid.hbs' for placing a bid on a game
@@ -57,6 +79,19 @@ app.get('/login', (req, res) => {
 app.post('/playbook', (req, res) => {
   res.render('playbook', {});
 })
+
+// Handlebars: 'userdisplay' for displaying all users and bets => will become a partial
+app.get('/userResults', (req, res) => {
+  res.render('userResults', {});
+})
+
+//Handlebars: post request 'bid.hbs' 
+app.post('/bid', (req, res) => {
+  console.log(req.body);
+})
+
+
+
 // =========================API ROUTE CALLS CODE====================================
 
 // [DEBUG]
@@ -98,8 +133,8 @@ app.use(express.json());
 app.use(express.static("public"));
 // app.use(require('./routes'));
 
-db.sequelize.sync().then(function() {
+// db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
-});
+// });
