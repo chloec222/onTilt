@@ -16,81 +16,89 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 // Use handlebars to render
 app.set("view engine", "handlebars");
 
-
 var games = [
-  { title: "Game 1: ", desc: "NBA vs. NBA2", imgUrl: "https://fetalpulse.com/wp-content/uploads/2015/07/NBA-Game-Time1.png" },
-  { title: "Game 2: ", desc: "NBA3 vs. NBA4", imgUrl: "https://blog.us.playstation.com/tachyon/2013/10/nba.jpg?fit=554,341" },
-  { title: "Game 3: ", desc: "NBA5 vs. NBA6", imgUrl: "https://cdn.nba.net/nba-drupal-prod/styles/landscape/s3/2016-09/GT-web-sm.jpg?itok=kNuQGd23" }
-]
-
-
-  userResults = [
   {
-      id: 1,
-      game: 'GAME 1',
-      bid: 80
+    title: "Game 1: ",
+    desc: "NBA vs. NBA2",
+    imgUrl:
+      "https://fetalpulse.com/wp-content/uploads/2015/07/NBA-Game-Time1.png"
   },
   {
-      id: 2,
-      game: 'GAME 5',
-      bid: 70
+    title: "Game 2: ",
+    desc: "NBA3 vs. NBA4",
+    imgUrl:
+      "https://blog.us.playstation.com/tachyon/2013/10/nba.jpg?fit=554,341"
   },
   {
-      id: 3,
-      game: 'GAME 3',
-      bid: 90
+    title: "Game 3: ",
+    desc: "NBA5 vs. NBA6",
+    imgUrl:
+      "https://cdn.nba.net/nba-drupal-prod/styles/landscape/s3/2016-09/GT-web-sm.jpg?itok=kNuQGd23"
   }
-]
+];
 
-
+userResults = [
+  {
+    id: 1,
+    game: "GAME 1",
+    bid: 80
+  },
+  {
+    id: 2,
+    game: "GAME 5",
+    bid: 70
+  },
+  {
+    id: 3,
+    game: "GAME 3",
+    bid: 90
+  }
+];
 
 // Handlebars: 'home.hbs' with '/games' display
-app.get('/', (req, res) => {
-  res.render('home', { games: games});
-})
+app.get("/", (req, res) => {
+  res.render("home", { games: games });
+});
 
 // Handlebars: 'bid.hbs' for placing a bid on a game
-app.get('/bid', (req, res) => {
-  res.render('bid', {});
-})
+app.get("/bid", (req, res) => {
+  res.render("bid", {});
+});
 
 // Handlebars: 'game.hbs' for viewing single game
-app.get('/game', (req, res) => {
-  res.render('game', {});
-})
+app.get("/game", (req, res) => {
+  res.render("game", {});
+});
 
 // Handlebars: 'dashboard.hbs' for viewing single game
-app.get('/dashboard', (req, res) => {
-  res.render('dashboard', {});
-})
+app.get("/dashboard", (req, res) => {
+  res.render("dashboard", {});
+});
 
 // Handlebars: 'signup.hbs' for viewing single game
-app.get('/signup', (req, res) => {
-  res.render('signup', {});
-})
+app.get("/signup", (req, res) => {
+  res.render("signup", {});
+});
 
 // Handlebars: 'login.hbs' for viewing single game
-app.get('/login', (req, res) => {
-  res.render('login', {});
-})
-
+app.get("/login", (req, res) => {
+  res.render("login", {});
+});
 
 // Handlebars: 'game.hbs' for viewing all games
-app.post('/playbook', (req, res) => {
-  res.render('playbook', {});
-})
+app.post("/playbook", (req, res) => {
+  res.render("playbook", {});
+});
 
 // Handlebars: 'userdisplay' for displaying all users and bets => will become a partial
-app.get('/userResults', (req, res) => {
-  res.render('userResults', {});
-})
+app.get("/userResults", (req, res) => {
+  res.render("userResults", {});
+});
 
-//Handlebars: post request 'bid.hbs' 
-app.post('/bid', (req, res) => {
+//Handlebars: post request 'bid.hbs'
+app.post("/bid", (req, res) => {
   console.log(req.body);
-})
-
-
+});
 
 // =========================API ROUTE CALLS CODE====================================
 
@@ -133,8 +141,8 @@ app.use(express.json());
 app.use(express.static("public"));
 // app.use(require('./routes'));
 
-// db.sequelize.sync().then(function() {
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
-// });
+});
