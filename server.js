@@ -37,23 +37,22 @@ var games = [
   }
 ];
 
-userResults = [
-  {
-    id: 1,
-    game: "GAME 1",
-    bid: 80
-  },
-  {
-    id: 2,
-    game: "GAME 5",
-    bid: 70
-  },
-  {
-    id: 3,
-    game: "GAME 3",
-    bid: 90
-  }
-];
+// app.get("/blog", renderBlog);
+// router.get('/', renderBlog);
+
+// // Handlebars helper for / and blog routes
+// function renderBlog(req, res) {
+//   var query = {};
+//   if (req.query.author_id) {
+//     query.AuthorId = req.query.author_id;
+//   }
+//   db.Post.findAll({
+//     where: query,
+//     include: [db.Author]
+//   }).then(function (posts) {
+//     res.render('blog', { posts: posts })
+//   });
+
 
 // Handlebars: 'home.hbs' with '/games' display
 app.get("/", (req, res) => {
@@ -85,20 +84,7 @@ app.get("/login", (req, res) => {
   res.render("login", {});
 });
 
-// Handlebars: 'game.hbs' for viewing all games
-app.post("/playbook", (req, res) => {
-  res.render("playbook", {});
-});
 
-// Handlebars: 'userdisplay' for displaying all users and bets => will become a partial
-app.get("/userResults", (req, res) => {
-  res.render("userResults", {});
-});
-
-//Handlebars: post request 'bid.hbs'
-app.post("/bid", (req, res) => {
-  console.log(req.body);
-});
 
 // =========================API ROUTE CALLS CODE====================================
 
@@ -121,19 +107,16 @@ app.get("/", (req, res) => {
 
 // [DEBUG]
 // telling express server where the API routes are located and act as a map that users will interact with when on app
-// require("./routes/api/bets.js")(app);
-// require("./routes/api/html.js")(app);
-// require("./routes/api/index.js")(app);
-// require("./routes/api/users.js")(app);
-// require("./routes/routes.js")(app);
+
+
 
 // =================================================================================
 
 // setting initial port or port 8080
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 4000;
 var db = require("./models");
 require("./routes/bets")(app);
-require("./routes/users")(app);
+// require("./routes/viewsRoutes")(app);
 
 // express makes it possible for server to interpret the submitted data
 app.use(express.urlencoded({ extended: true }));

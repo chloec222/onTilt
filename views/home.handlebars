@@ -1,4 +1,56 @@
-{{!-- games-index --}}
+{{!-- dashboard section --}}
+<div class="container shadow p-3 mb-5 bg-dark rounded-lg pt-5">
+  <div class="row">
+    <div class="col text-center">
+      <a class="btn btn-info rounded-pill px-4 my-3 mx-4" href="/user">CREATE NEW USER</a>
+      <a class="btn btn-primary rounded-pill px-4 my-3 mx-4" href="/bid">PLACE A BID</a>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col">
+      <div class="user-container mb-5">
+        <div class="wrapper">
+        <h1 id="dashTitle">BETS DASHBOARD</h1>
+        <h6>Search current users and view logs of bets history</h6>
+        </div>
+        <table class="table table-striped table-hover table-responsive table-dark rounded-lg">
+          <thead>
+            <tr>
+              <th colspan="2">USER</th>
+              <th>TOTAL BIDS</th>
+              <th>USER'S BIDS</th>
+              <th>PLACE A BID</th>
+              <th>DELETE USER</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="form-row">
+              <form id="user-form">
+                <td colspan="5" >
+                  <input placeholder="Enter a name" id="user-name" type="text" />
+                </td>
+                <td colspan="2">
+                  <button type="submit" class="btn btn-light rounded-pill px-4">SEARCH</button>
+                </td>
+              </form>
+            <tr id="form-row">
+              <form id="game-form">
+                <td colspan="5">
+                  <input placeholder="Enter a game" id="game-name" type="text" />
+                </td>
+                <td colspan="2">
+                  <button type="submit" class="btn btn-light rounded-pill px-4">SEARCH</button>
+                </td>
+              </form>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- game section --}}
   <div class="row mt-4">
       <div class="col-lg-6 offset-lg-3">
           <h1>GAMES</h1>
@@ -15,21 +67,9 @@
                 </div>
               </div>
             {{/each}}
-            
       </div>
   </div>
+</div>
 
-  <table id="table">
-            <tr>
-                <th>User ID</th>
-                <th>Selected Game</th>
-                <th>Bid</th>
-            </tr>
-            {{#each userResults}}
-            <tr>
-                <td>{{this.id}}</td>
-                <td>{{this.game}}</td>
-                <td>{{this.bid}}</td>
-            </tr>
-            {{/each}}
-        </table>
+
+

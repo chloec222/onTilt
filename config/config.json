@@ -1,11 +1,11 @@
 {
   "development": {
     "username": "root",
-    "password": "1234",
+    "password": "Isaacaveryjoshua1!",
     "database": "database_development",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": 1
   },
   "test": {
     "username": "root",
@@ -13,7 +13,7 @@
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": 1
   },
   "production": {
     "username": "root",
@@ -21,6 +21,6 @@
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": 1
   }
 }
