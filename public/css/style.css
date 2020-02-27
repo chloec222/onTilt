@@ -202,3 +202,24 @@ body{
   letter-spacing: .2em;
   text-shadow: 0 0 30px rgb(255, 255, 255);
 }
+
+#user-name{
+  border-radius: .5em .5em;
+  width: 20em;
+  height:2.5em;
+}
+
+#game-name{
+  border-radius: .5em .5em;
+  width: 20em;
+  height:2.5em;
+}
+
+td{
+  width:100%;
+}
+
+.wrapper{
+  color:white;
+  
+}
