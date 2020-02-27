@@ -116,6 +116,8 @@ app.get("/", (req, res) => {
 var PORT = process.env.PORT || 4000;
 var db = require("./models");
 require("./routes/bets")(app);
+require("./routes/users")(app);
+
 // require("./routes/viewsRoutes")(app);
 
 // express makes it possible for server to interpret the submitted data
