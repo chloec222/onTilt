@@ -4,24 +4,26 @@
 <meta charset="UTF-8">
 
 <head>
-{{> head}}
+    {{> head}}
+    {{{_sections.styles}}}
     <title>OnTilt</title>
 </head>
 
 
 <body>
-{{> navbar}}
-{{>jumbotron}}
+    {{> navbar}}
+    {{>jumbotron}}
 
     <div class="container">
         {{{body}}}
     </div>
 
 
-{{> footer}}
+    {{> footer}}
 
 
-{{>script}}
+    {{>script}}
+    {{{_sections.scripts}}}
 </body>
 
 </html>

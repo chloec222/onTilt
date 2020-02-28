@@ -2,7 +2,7 @@ const db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/users/", function(req, res) {
-    db.User.findAll({}).then(function(dbUser) {
+    db.User.findAll().then(function(dbUser) {
       res.json(dbUser);
     });
   });
@@ -18,7 +18,8 @@ module.exports = function(app) {
     db.User.findOne({
       where: {
         id: req.params.id
-      }
+      },
+      include: db.Bet
     }).then(function(dbUser) {
       res.json(dbUser);
     });
@@ -33,4 +34,17 @@ module.exports = function(app) {
       res.json(dbUser);
     });
   });
+  app
+    .route("/api/users/:id/bets")
+    .get(async (req, res) => {
+      const bets = await db.Bet.findAll({ where: { UserId: req.params.id } });
+      res.json({ bets });
+    })
+    .post(async (req, res) => {
+      const result = await db.Bet.create({
+        UserId: req.params.id,
+        ...req.body
+      });
+      res.json(result);
+    });
 };
