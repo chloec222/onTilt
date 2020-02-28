@@ -1,0 +1,33 @@
+<div class="user-container shadow p-3 mb-5 bg-dark rounded-lg pt-5">
+  <div class="row">
+    <div class="col">
+        <div class="wrapper">
+        <a class="btn btn-outline-light px-4 my-3 mx-4" href="/user">CREATE NEW USER</a>
+        <a class="btn btn-outline-light px-4 my-3 mx-4" href="/">BETS DASHBOARD</a>
+        </div>
+    </div>
+  
+    <div class="col">
+      <form id="bid">
+        <div class="form-group">
+          <label for="title">SELECTED TEAM:</label>
+          <input placeholder="Enter the team you want to bid on." type="text" class="form-control" id="title">
+          <br />
+          <label for="body">BID AMOUNT:</label>
+          <textarea placeholder="Enter the bid amount you would like to place." class="form-control" rows="10" id="body"></textarea>
+          <div class="form-group">
+            <label for="category">SELECT USER:</label>
+            <select class="form-control" id="user">
+            </select>
+          </div>
+          <br />
+          <button type="submit" class="btn btn-light px-4 submit">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{{#section 'scripts'}}
+<script src="/js/bidFunction.js"></script>
+{{/section}}

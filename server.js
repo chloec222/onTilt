@@ -28,26 +28,6 @@ app.engine(
 // Use handlebars to render
 app.set("view engine", "handlebars");
 
-var games = [
-  {
-    title: "Game 1: ",
-    desc: "NBA vs. NBA2",
-    imgUrl:
-      "https://fetalpulse.com/wp-content/uploads/2015/07/NBA-Game-Time1.png"
-  },
-  {
-    title: "Game 2: ",
-    desc: "NBA3 vs. NBA4",
-    imgUrl:
-      "https://blog.us.playstation.com/tachyon/2013/10/nba.jpg?fit=554,341"
-  },
-  {
-    title: "Game 3: ",
-    desc: "NBA5 vs. NBA6",
-    imgUrl:
-      "https://cdn.nba.net/nba-drupal-prod/styles/landscape/s3/2016-09/GT-web-sm.jpg?itok=kNuQGd23"
-  }
-];
 
 // app.get("/blog", renderBlog);
 // router.get('/', renderBlog);
@@ -67,7 +47,7 @@ var games = [
 
 // Handlebars: 'home.hbs' with '/games' display
 app.get("/", (req, res) => {
-  res.render("home", { games: games });
+  res.render("home", {});
 });
 
 app.get("/schedule", function(req, res) {
@@ -98,6 +78,8 @@ app.get("/signup", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login", {});
 });
+
+
 
 // =========================API ROUTE CALLS CODE====================================
 
