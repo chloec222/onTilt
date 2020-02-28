@@ -5,8 +5,11 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Bet.associate = function(models) {
-    Bet.belongsTo(models.User);
+    Bet.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
-
   return Bet;
 };
