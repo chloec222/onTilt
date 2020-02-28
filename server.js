@@ -12,7 +12,19 @@ app.use(bodyParser.json());
 // require handlebars
 var exphbs = require("express-handlebars");
 // Use "main" as our default layout
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
+    helpers: {
+      section: function(name, options) {
+        if (!this._sections) this._sections = {};
+        this._sections[name] = options.fn(this);
+        return null;
+      }
+    }
+  })
+);
 // Use handlebars to render
 app.set("view engine", "handlebars");
 
@@ -53,10 +65,13 @@ var games = [
 //     res.render('blog', { posts: posts })
 //   });
 
-
 // Handlebars: 'home.hbs' with '/games' display
 app.get("/", (req, res) => {
   res.render("home", { games: games });
+});
+
+app.get("/schedule", function(req, res) {
+  res.render("schedule");
 });
 
 // Handlebars: 'bid.hbs' for placing a bid on a game
@@ -84,8 +99,6 @@ app.get("/login", (req, res) => {
   res.render("login", {});
 });
 
-
-
 // =========================API ROUTE CALLS CODE====================================
 
 // [DEBUG]
@@ -107,8 +120,6 @@ app.get("/", (req, res) => {
 
 // [DEBUG]
 // telling express server where the API routes are located and act as a map that users will interact with when on app
-
-
 
 // =================================================================================
 

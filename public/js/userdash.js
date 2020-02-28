@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  console.log("test2");
   var queryURL =
     "https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4387";
   $.ajax({

@@ -1,11 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "12086Appl",
+    "password": "1234",
     "database": "database_development",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": 1
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
@@ -16,11 +15,6 @@
     "operatorsAliases": 1
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": 1
+    "use_env_variable": "JAWSDB_URL"
   }
 }
