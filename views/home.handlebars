@@ -1,26 +1,23 @@
 {{!-- dashboard section --}}
-<div class="container shadow p-3 mb-5 bg-dark rounded-lg pt-5">
-  <div class="row">
-    <div class="col text-center">
-      <a class="btn btn-info rounded-pill px-4 my-3 mx-4" href="/user">CREATE NEW USER</a>
-      <a class="btn btn-primary rounded-pill px-4 my-3 mx-4" href="/bid">PLACE A BID</a>
-    </div>
-  </div>
-  <div class="row ">
-    <div class="col">
-      <div class="user-container mb-5">
+
+  <div class="user-container shadow p-3 mb-5 bg-dark rounded-lg pt-5">
+    <div class="row ">
+      <div class="col">
         <div class="wrapper">
-        <h1 id="dashTitle">BETS DASHBOARD</h1>
-        <h6>Search current users and view logs of bets history</h6>
+        <a class="btn btn-outline-light px-4 my-3 mx-4" href="/user">CREATE NEW USER</a>
+        <a class="btn btn-outline-light px-4 my-3 mx-4" href="/bid">PLACE A BID</a>
         </div>
-        <table class="table table-striped table-hover table-responsive table-dark rounded-lg">
+          <h1 id="dashTitle">BETS DASHBOARD</h1>
+          <h6>Search current users and view logs of bets history</h6>
+
+        <table class="table table-striped table-hover table-dark table-responsive-lg rounded-lg">
           <thead>
             <tr>
               <th colspan="2">USER</th>
-              <th>TOTAL BIDS</th>
-              <th>USER'S BIDS</th>
-              <th>PLACE A BID</th>
-              <th>DELETE USER</th>
+              <th scope="col">TOTAL BIDS</th>
+              <th scope="col">USER'S BIDS</th>
+              <th scope="col">PLACE A BID</th>
+              <th scope="col">DELETE USER</th>
             </tr>
           </thead>
           <tbody>
@@ -30,28 +27,37 @@
                   <input placeholder="Enter a name" id="user-name" type="text" />
                 </td>
                 <td colspan="2">
-                  <button type="submit" class="btn btn-light rounded-pill px-4">SEARCH</button>
+                  <button type="submit" class="btn btn-light px-4">SEARCH</button>
                 </td>
               </form>
-            <tr id="form-row">
+            <tr id="form-row2">
               <form id="game-form">
                 <td colspan="5">
                   <input placeholder="Enter a game" id="game-name" type="text" />
                 </td>
-                <td colspan="2">
-                  <button type="submit" class="btn btn-light rounded-pill px-4">SEARCH</button>
+                <td>
+                  <button type="submit" class="btn btn-light px-4">SEARCH</button>
                 </td>
               </form>
             </tr>
           </tbody>
         </table>
       </div>
-    </div>
-  </div>
+    </div> 
 </div>
 
+{{!-- <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /> --}}
+
 {{!-- game section --}}
-  <div class="row mt-4">
+<div class="container mt-5" id="gameContainer">
+  <div class="row">
       <div class="col-lg-6 offset-lg-3">
           <h1>GAMES</h1>
           {{#each games}}
@@ -70,6 +76,7 @@
       </div>
   </div>
 </div>
+
 
 
 

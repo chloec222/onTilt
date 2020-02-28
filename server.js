@@ -59,24 +59,35 @@ app.get("/bid", (req, res) => {
   res.render("bid", {});
 });
 
-// Handlebars: 'game.hbs' for viewing single game
-app.get("/game", (req, res) => {
-  res.render("game", {});
+// Handlebars: 'user.hbs' for creating new user
+app.get("/user", (req, res) => {
+  res.render("user", {});
 });
 
-// Handlebars: 'dashboard.hbs' for viewing single game
+
+// Handlebars: 'dashboard.hbs' for account profile
 app.get("/dashboard", (req, res) => {
   res.render("dashboard", {});
 });
 
-// Handlebars: 'signup.hbs' for viewing single game
+// Handlebars: 'signup.hbs' for signing up
 app.get("/signup", (req, res) => {
   res.render("signup", {});
 });
 
-// Handlebars: 'login.hbs' for viewing single game
+// Handlebars: 'login.hbs' for logging in
 app.get("/login", (req, res) => {
   res.render("login", {});
+});
+
+// Handlebars: 'user.hbs' to go back to home.hbs
+app.get("/user", (req, res) => {
+  res.render("/", {});
+});
+
+// Handlebars: 'bid.hbs' to go back to home.hbs
+app.get("/bid", (req, res) => {
+  res.render("/", {});
 });
 
 

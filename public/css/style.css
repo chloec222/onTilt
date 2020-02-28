@@ -219,7 +219,10 @@ td{
   width:100%;
 }
 
-.wrapper{
+.user-container{
   color:white;
-  
+}
+
+.wrapper{
+  text-align: center;
 }
