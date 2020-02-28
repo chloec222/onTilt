@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   /* global moment */
 
   // blogBox holds all of our posts

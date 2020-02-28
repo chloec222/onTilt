@@ -7,7 +7,7 @@ $(document).ready(function() {
   // Adding event listeners to the form to create a new object, and the button to delete
   // a user
   $(document).on("submit", "#user-form", handleUserFormSubmit);
-  $(document).on("click", ".delete-user", handleDeleteButtonPress);
+  // $(document).on("click", ".delete-user", handleDeleteButtonPress);
 
   // Getting the intiial list of Users
   getUsers();
@@ -41,18 +41,18 @@ $(document).ready(function() {
     var newTr = $("<tr>");
     newTr.data("user", userData);
     newTr.append("<td>" + userData.name + "</td>");
+    // newTr.append(
+    //   "<td># of posts will display when we learn joins in the next activity!</td>"
+    // );
     newTr.append(
-      "<td># of posts will display when we learn joins in the next activity!</td>"
+      "<td><a href='/blog?user_id=" + userData.id + "'>Go to User's Bids</a></td>"
     );
-    newTr.append(
-      "<td><a href='/blog?user_id=" + userData.id + "'>Go to Posts</a></td>"
-    );
-    newTr.append(
-      "<td><a href='/cms?user_id=" + userData.id + "'>Create a Post</a></td>"
-    );
-    newTr.append(
-      "<td><a style='cursor:pointer;color:red' class='delete-user'>Delete User</a></td>"
-    );
+    // newTr.append(
+    //   "<td><a href='/cms?user_id=" + userData.id + "'>Create a Post</a></td>"
+    // );
+    // newTr.append(
+    //   "<td><a style='cursor:pointer;color:red' class='delete-user'>Delete User</a></td>"
+    // );
     return newTr;
   }
 

@@ -1,29 +1,29 @@
 <div class="user-container shadow p-3 mb-5 bg-dark rounded-lg pt-5 blog">
   <div class="row">
     <div class="col">
-        <div class="wrapper">
-        </div>
+      <h1 id="dashTitle">MAKE A BET</h1>
+      <h6>Pick a team, make a bet and watch the game happen.</h6>
 <div class="container">
       <form>
         <div class="row">
           <div class="col">
-            <label for="title">ENTER NAME</label>
+            <label for="title">YOUR NAME</label>
             <input type="text" class="form-control" placeholder="Name">
           </div>
         </div>
 
         <div class="form-group">
-          <label for="title">ENTER TEAM</label>
-          <input placeholder="Enter Team " type="text" class="form-control" id="team">
+          <label for="title">ENTER TEAM NAME</label>
+          <input placeholder="Team Name " type="text" class="form-control" id="team">
           <br />
-          <label for="body">ENTER BID AMOUNT</label>
-          <input placeholder="Enter Team " type="text" class="form-control" id="bid">
+          <label for="body">ENTER BET AMOUNT</label>
+          <input placeholder="$ " type="text" class="form-control" id="bet">
       
           <div class="form-group">
        
           </div>
           <br />
-          <button type="submit" class="btn btn-light px-4 submit">SUBMIT</button>
+          <a href="/dash" class="btn btn-primary px-4 mt-3">SUBMIT</a>
         </div>
       </form>
     </div>
@@ -36,4 +36,5 @@
 
 {{#section 'scripts'}}
 <script src="/js/userFunction.js"></script>
+<script src="/js/bidFunction.js"></script>
 {{/section}}
