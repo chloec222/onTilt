@@ -28,26 +28,6 @@ app.engine(
 // Use handlebars to render
 app.set("view engine", "handlebars");
 
-var games = [
-  {
-    title: "Game 1: ",
-    desc: "NBA vs. NBA2",
-    imgUrl:
-      "https://fetalpulse.com/wp-content/uploads/2015/07/NBA-Game-Time1.png"
-  },
-  {
-    title: "Game 2: ",
-    desc: "NBA3 vs. NBA4",
-    imgUrl:
-      "https://blog.us.playstation.com/tachyon/2013/10/nba.jpg?fit=554,341"
-  },
-  {
-    title: "Game 3: ",
-    desc: "NBA5 vs. NBA6",
-    imgUrl:
-      "https://cdn.nba.net/nba-drupal-prod/styles/landscape/s3/2016-09/GT-web-sm.jpg?itok=kNuQGd23"
-  }
-];
 
 // app.get("/blog", renderBlog);
 // router.get('/', renderBlog);
@@ -67,7 +47,7 @@ var games = [
 
 // Handlebars: 'home.hbs' with '/games' display
 app.get("/", (req, res) => {
-  res.render("home", { games: games });
+  res.render("home", {});
 });
 
 app.get("/schedule", function(req, res) {
@@ -79,25 +59,38 @@ app.get("/bid", (req, res) => {
   res.render("bid", {});
 });
 
-// Handlebars: 'game.hbs' for viewing single game
-app.get("/game", (req, res) => {
-  res.render("game", {});
+// Handlebars: 'user.hbs' for creating new user
+app.get("/user", (req, res) => {
+  res.render("user", {});
 });
 
-// Handlebars: 'dashboard.hbs' for viewing single game
+
+// Handlebars: 'dashboard.hbs' for account profile
 app.get("/dashboard", (req, res) => {
   res.render("dashboard", {});
 });
 
-// Handlebars: 'signup.hbs' for viewing single game
+// Handlebars: 'signup.hbs' for signing up
 app.get("/signup", (req, res) => {
   res.render("signup", {});
 });
 
-// Handlebars: 'login.hbs' for viewing single game
+// Handlebars: 'login.hbs' for logging in
 app.get("/login", (req, res) => {
   res.render("login", {});
 });
+
+// Handlebars: 'user.hbs' to go back to home.hbs
+app.get("/user", (req, res) => {
+  res.render("/", {});
+});
+
+// Handlebars: 'bid.hbs' to go back to home.hbs
+app.get("/bid", (req, res) => {
+  res.render("/", {});
+});
+
+
 
 // =========================API ROUTE CALLS CODE====================================
 
