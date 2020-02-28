@@ -13,6 +13,15 @@
   .content{
     padding:3em 0;
   }
+
+  #homeContainer{
+    height:300px;
+    position: relative;
+  }
+  
+  #homeContent{
+    padding:3em 0;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -23,6 +32,15 @@
   }
 
   .content{
+    padding:3em 0;
+  }
+
+  #homeContainer{
+    height:400px;
+    position: relative;
+  }
+  
+  #homeContent{
     padding:3em 0;
   }
 }
@@ -36,19 +54,39 @@
   .content{
     padding:6em 0;
   }
+
+  #homeContainer{
+    height:500px;
+    position: relative;
+  }
+  
+  #homeContent{
+    padding:6em 0;
+  }
 }
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .container{
-    height:700;
+    height:700px;
     position: relative;
   }
   .content{
     padding:9em 0;
   }
+
+  #homeContainer{
+    height:700;
+    position: relative;
+  }
+  
+  #homeContent{
+    padding:9em 0;
+  }
 }
+
+
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -59,15 +97,25 @@
   .content{
     padding:12em 0;
   }
+
+  #homeContainer{
+    height:800px;
+    position: relative;
+  }
+  
+  #homeContent{
+    padding:12em 0;
+  }
 }
 
+
 body{
-  /* font-family: 'Titillium Web', sans-serif; */
   font-family: 'Quicksand', sans-serif;
-  background-color: rgb(247, 247, 247);
+  background-color: black;
   font-size: 1em;
   position: relative;
-  padding-bottom: 100em;
+  color: whitesmoke;
+  /* padding-bottom: 100em; */
 }
 
 .jumbotron{
@@ -107,6 +155,28 @@ body{
   text-align: center;
 }
 
+#homeContainer #homeBkgd {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('basketball.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity:.95;
+}
+
+#homeContainer #homeContent {
+  position: relative;
+  z-index: 1;
+}
+
+#homeContent{
+  text-align: center;
+}
+
+
 #logo{
   font-family: 'Faster One', cursive;
   letter-spacing: .2em;
@@ -120,6 +190,7 @@ body{
   color:whitesmoke;
 }
 
+
 #motto {
   font-family: 'Russo One', sans-serif;
   font-weight: lighter;
@@ -131,7 +202,7 @@ body{
 
 #slogan{
   font-size: 1em;
-  text-shadow: 0 0 10px rgb(0, 0, 0);
+  text-shadow: 0 0 10px black;
 }
 
 #mainBtn{
@@ -148,14 +219,14 @@ body{
   font-family: 'Faster One', cursive;
   letter-spacing: .2em;
   color:whitesmoke;
-  text-shadow: 0 0 10px rgb(0, 0, 0);
+  text-shadow: 0 0 10px black;
 }
 
 #logo_login{
   font-family: 'Faster One', cursive;
   letter-spacing: .2em;
-  color:rgb(0, 0, 0);
-  /* text-shadow: 0 0 10px rgb(0, 0, 0); */
+  color:black;
+  
 }
  label{
    text-transform: uppercase;
@@ -168,7 +239,13 @@ body{
 
 #loginWidth{
   max-width:max-content;
+  padding-bottom: 100em;
 } 
+
+#signinWidth{
+  padding-bottom: 100em;
+}
+
 
 #acctUl{
   margin: 2em 0;
@@ -223,6 +300,6 @@ td{
   color:white;
 }
 
-.wrapper{
-  text-align: center;
+#dashboard{
+  color: rgb(51, 51, 51);
 }

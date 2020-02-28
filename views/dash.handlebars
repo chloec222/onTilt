@@ -1,0 +1,154 @@
+
+
+<div class="user-container shadow p-3 mb-5 bg-dark rounded-lg pt-5">
+  <div class="row ">
+    <div class="col">
+      {{!-- <div class="wrapper">
+        <a class="btn btn-outline-light px-4 my-3 mx-4" href="/bet">MAKE A BET</a>
+      </div> --}}
+      <h1 id="dashTitle">BETS DASHBOARD</h1>
+      <h6>Search users & their bets history</h6>
+
+      <table class="table table-striped table-hover table-dark table-responsive-lg rounded-lg">
+        <thead>
+          <tr>
+            <th colspan="2">USER</th>
+            <th scope="col"></th>
+            <th scope="col">USER'S BIDS</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="form-row">
+            <form id="user-form">
+              <td colspan="5">
+                <input placeholder="Enter a name" id="user-name" type="text" />
+              </td>
+              <td colspan="2">
+                <a href="/dash" class="btn btn-primary px-4 mt-3">SUBMIT</a>
+              </td>
+            </form>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<h3>**either we make a make a bet button here or the form directly here**</h3>
+
+<div class="user-container shadow p-3 mb-5 bg-dark rounded-lg pt-5 blog">
+  <div class="row">
+    <div class="col">
+      <h1 id="dashTitle">MAKE A BET</h1>
+      <h6>Pick a team, make a bet and watch the game happen.</h6>
+<div class="container">
+      <form>
+        <div class="row">
+          <div class="col">
+            <label for="title">YOUR NAME</label>
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="title">ENTER TEAM NAME</label>
+          <input placeholder="Team Name " type="text" class="form-control" id="team">
+          <br />
+          <label for="body">ENTER BET AMOUNT</label>
+          <input placeholder="$ " type="text" class="form-control" id="bet">
+      
+          <div class="form-group">
+       
+          </div>
+          <br />
+          <a href="/dash" class="btn btn-primary px-4 mt-3">SUBMIT</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- user profile -->
+<div class="container" id="dashboard">
+  <div class="row">
+    <div class="col ">
+          <div class="nav flex-column nav-pills mx-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            
+            <a class="nav-link btn btn-primary my-2 text-center" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="true">PROFILE</a>
+
+            <a class="nav-link btn btn-primary my-2 text-center" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="false">MY BIDS</a>
+
+            <a class="nav-link btn btn-primary my-2 text-center" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">SETTINGS</a>
+          </div>
+    </div>
+
+    <!-- tab content -->
+        <div class="col-9">
+          <div class="tab-content" id="v-pills-tabContent">
+
+    <!-- profile -->
+<div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+              <div class="card shadow-sm p-3 mb-5 bg-light rounded rounded-lg mt-2">
+                <h5><b>PROFILE</b></h5>
+                <h6>ACCOUNT</h6>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item border-0">Name:  John Doe</li>
+                  <li class="list-group-item border-0">Username: johndoe123</li>
+                  <li class="list-group-item border-0">Email:  johndoe123@gmail.cpm </li>
+                </ul>
+                <div class="card-body text-center">
+                  <a href="facebook.com" class="card-link">Fackbook</a>
+                  <a href="twitter.com" class="card-link">Twitter</a>
+                  <a href="instagram.com" class="card-link">Instagram</a>
+                </div>
+              </div>
+            </div>
+
+    <!-- my bids -->
+            <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              <h5><b>MY BIDS</b></h5>
+              <h6>BIDS DATABASE</h6>
+
+              <nav class="navbar navbar-light bg-light float-right">
+                <form class="form-inline">
+                  <!-- <input class="form-control rounded-pill px-4 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn btn-primary rounded-pill px-4 my-2 my-sm-0" type="submit">Search</button> -->
+                </form>
+              </nav>
+
+              <div class="table table-responsive{-sm|-md|-lg|-xl}">
+           <table id="table" class="table table-striped table-bordered table-condensed table-hover" >
+                <tr> 
+                    <th>
+                        Column one
+                    </th>
+                    <th>
+                        Column two
+                    </th>                                                
+                </tr>           
+                    {{#rows}} 
+                <tr>
+                    <td>
+                        {{name}}
+                    </td>
+                    <td>
+                        {{age}}
+                    </td>                     
+                </tr>               
+                        {{/rows}}        
+            </table>        
+            </div>
+          </div>
+                    
+
+
+{{#section 'scripts'}}
+<script src="js/index.js"></script>
+<script src="/js/homeDash.js"></script>
+<script src="js/home.js"></script>
+{{/section}}

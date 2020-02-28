@@ -28,70 +28,80 @@ app.engine(
 // Use handlebars to render
 app.set("view engine", "handlebars");
 
-
-// app.get("/blog", renderBlog);
-// router.get('/', renderBlog);
-
-// // Handlebars helper for / and blog routes
-// function renderBlog(req, res) {
-//   var query = {};
-//   if (req.query.author_id) {
-//     query.AuthorId = req.query.author_id;
-//   }
-//   db.Post.findAll({
-//     where: query,
-//     include: [db.Author]
-//   }).then(function (posts) {
-//     res.render('blog', { posts: posts })
-//   });
-
-// Handlebars: 'home.hbs' with '/games' display
 app.get("/", (req, res) => {
-  res.render("home", {});
+  res.render("landing", {layout:"main2"});
+});
+
+// app.get("/signup", (req, res) => {
+//   res.render("schedule", {});
+// });
+
+
+// app.get("/login", (req, res) => {
+//   res.render("dash", {});
+// });
+
+// ==============self route======================
+
+app.get("/home", (req, res) => {
+  res.render("home", {layout:"main"});
+});
+
+app.get("landing", (req, res) => {
+  res.render("home", {layout:"main"});
 });
 
 app.get("/schedule", function(req, res) {
   res.render("schedule");
 });
 
-// Handlebars: 'bid.hbs' for placing a bid on a game
-app.get("/bid", (req, res) => {
-  res.render("bid", {});
-});
-
-// Handlebars: 'user.hbs' for creating new user
-app.get("/user", (req, res) => {
-  res.render("user", {});
-});
-
-
-// Handlebars: 'dashboard.hbs' for account profile
-app.get("/dashboard", (req, res) => {
-  res.render("dashboard", {});
-});
-
-// Handlebars: 'signup.hbs' for signing up
 app.get("/signup", (req, res) => {
-  res.render("signup", {});
+  res.render("signup", {layout:"main2"});
 });
 
-// Handlebars: 'login.hbs' for logging in
 app.get("/login", (req, res) => {
-  res.render("login", {});
-});
-
-// Handlebars: 'user.hbs' to go back to home.hbs
-app.get("/user", (req, res) => {
-  res.render("/", {});
-});
-
-// Handlebars: 'bid.hbs' to go back to home.hbs
-app.get("/bid", (req, res) => {
-  res.render("/", {});
+  res.render("login", {layout:"main2"});
 });
 
 
+app.get("/bet", (req, res) => {
+  res.render("bet", {});
+});
 
+
+app.get("/dash", (req, res) => {
+  res.render("dash", {});
+});
+
+// ================back to home==========================
+
+app.get("/schedule", (req, res) => {
+  res.render("home", {layout: "main"});
+});
+
+app.get("/dash", (req, res) => {
+  res.render("home", {layout: "main"});
+});
+
+
+app.get("/bet", (req, res) => {
+  res.render("home", {layout: "main"});
+});
+
+
+
+app.get("/login", (req, res) => {
+  res.render("home", {layout: "main"});
+});
+
+
+app.get("/home", (req, res) => {
+  res.render("home", {layout: "main"});
+});
+
+app.get("/signup", (req, res) => {
+  res.render("home", {layout: "main"});
+});
 // =========================API ROUTE CALLS CODE====================================
 
 // [DEBUG]
