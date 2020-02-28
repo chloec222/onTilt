@@ -2,22 +2,28 @@
   <div class="row">
     <div class="col">
         <div class="wrapper">
-        <a class="btn btn-outline-light px-4 my-3 mx-4" href="/bid">PLACE A BID</a>
-        <a class="btn btn-outline-light px-4 my-3 mx-4" href="/">BETS DASHBOARD</a>
         </div>
-    </div>
 <div class="container">
-  <div class="row">
-    <div class="col">
       <form>
         <div class="row">
           <div class="col">
+            <label for="title">ENTER NAME</label>
             <input type="text" class="form-control" placeholder="Name">
           </div>
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Username">
+        </div>
+
+        <div class="form-group">
+          <label for="title">ENTER TEAM</label>
+          <input placeholder="Enter Team " type="text" class="form-control" id="team">
+          <br />
+          <label for="body">ENTER BID AMOUNT</label>
+          <input placeholder="Enter Team " type="text" class="form-control" id="bid">
+      
+          <div class="form-group">
+       
           </div>
-          <button type="submit" class="btn btn-primary">Create User</button>
+          <br />
+          <button type="submit" class="btn btn-light px-4 submit">SUBMIT</button>
         </div>
       </form>
     </div>
@@ -26,27 +32,7 @@
 
 
 
-    {{!-- <div class="col-md-12 blog-container bg-dark rounded-lg pt-5" id="blogBox">
-      {{#each posts}}
-        <div class="panel panel-default" data-post="{{id}}">
-          <div class="panel-heading">
-            <button class="delete btn btn-outline-light px-4 my-3 mx-4">x</button>
-
-            <button class="edit btn btn-outline-light px-4 my-3 mx-4">EDIT</button>
-            <h2>{{title}}</h2>
-              <small>{{createdAt}}</small>
-            </h2>
-            <h5 style="float: right; color: blue; margin-top: -10px;">Written by: {{User.name}} </h5>
-          </div>
-          <div class="panel-body">
-            <p>{{body}}</p>
-          </div>
-        </div>
-      {{/each}}
-    </div>
-  </div>
-</div> --}}
-
+  
 
 {{#section 'scripts'}}
 <script src="/js/userFunction.js"></script>
