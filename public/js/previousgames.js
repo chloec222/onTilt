@@ -1,7 +1,7 @@
 $(document).ready(function() {
   console.log("test2");
   var queryURL =
-    "https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4387";
+    "https://www.thesportsdb.com/api/v1/json/1/eventspastleague.php?id=4387";
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -15,12 +15,14 @@ $(document).ready(function() {
       var awayTeam = results[i].strAwayTeam;
       var homeScore = results[i].intHomeScore;
       var awayScore = results[i].intAwayScore;
+
       console.log(homeTeam);
       console.log(awayTeam);
+
       gameDiv.append(homeTeam + " " + homeScore + " " + "vs" + " ");
       gameDiv.append(awayTeam + " " + awayScore);
 
-      $("#games").append(gameDiv);
+      $("#pregames").append(gameDiv);
       console.log(response.data);
     }
   });
