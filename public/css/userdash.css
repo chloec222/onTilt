@@ -10,3 +10,9 @@ body {
 h1 {
   text-align: center;
 }
+
+#pregames {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
