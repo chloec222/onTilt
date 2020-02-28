@@ -6,8 +6,27 @@
         <a class="btn btn-outline-light px-4 my-3 mx-4" href="/">BETS DASHBOARD</a>
         </div>
     </div>
-  
-    <div class="col-md-12 blog-container bg-dark rounded-lg pt-5" id="blogBox">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Username">
+          </div>
+          <button type="submit" class="btn btn-primary">Create User</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+    {{!-- <div class="col-md-12 blog-container bg-dark rounded-lg pt-5" id="blogBox">
       {{#each posts}}
         <div class="panel panel-default" data-post="{{id}}">
           <div class="panel-heading">
@@ -26,7 +45,7 @@
       {{/each}}
     </div>
   </div>
-</div>
+</div> --}}
 
 
 {{#section 'scripts'}}
