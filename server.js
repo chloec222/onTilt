@@ -32,6 +32,10 @@ app.get("/", (req, res) => {
   res.render("landing", {layout:"main2"});
 });
 
+app.get("/landing", (req, res) => {
+  res.render("landing", {layout:"main2"});
+});
+
 // app.get("/signup", (req, res) => {
 //   res.render("schedule", {});
 // });
