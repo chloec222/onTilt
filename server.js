@@ -59,15 +59,15 @@ app.get("/schedule", function(req, res) {
 });
 
 app.get("/newmain", function(req, res) {
-  res.render("newmain", { layout: "main2" });
+  res.render("newmain", { layout: "main" });
 });
 
 app.get("/newusers", function(req, res) {
-  res.render("newusers", { layout: "main2" });
+  res.render("newusers", { layout: "main" });
 });
 
 app.get("/newbets", function(req, res) {
-  res.render("newbets", { layout: "main2" });
+  res.render("newbets", { layout: "main" });
 });
 
 app.get("/signup", (req, res) => {
@@ -111,15 +111,6 @@ app.get("/home", (req, res) => {
 app.get("/signup", (req, res) => {
   res.render("home", { layout: "main" });
 });
-// =========================API ROUTE CALLS CODE====================================
-
-// [DEBUG]
-// telling express server where the API routes are located and act as a map that users will interact with when on app
-// require("./routes/api/bets.js")(app);
-// require("./routes/api/html.js")(app);
-// require("./routes/api/index.js")(app);
-// require("./routes/api/users.js")(app);
-// require("./routes/routes.js")(app);
 
 // =========================CSS ROUTE CALL CODE====================================
 
@@ -127,11 +118,6 @@ app.get("/signup", (req, res) => {
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-
-// =========================API ROUTE CALLS CODE====================================
-
-// [DEBUG]
-// telling express server where the API routes are located and act as a map that users will interact with when on app
 
 // =================================================================================
 

@@ -17,9 +17,13 @@ $(document).ready(function() {
       var awayScore = results[i].intAwayScore;
       console.log(homeTeam);
       console.log(awayTeam);
-      gameDiv.append(
-        `${homeTeam} ${homeScore || ""} vs ${awayTeam} ${awayScore || ""}`
-      );
+      // gameDiv.append(
+      //   `${homeTeam} ${homeScore || ""} vs ${awayTeam} ${awayScore || ""}`
+      // );
+
+      gameDiv.append(homeTeam + ": " + homeScore + " " + " " + " | " + "<span>vs</span>" + " | " + " " + " ");
+      gameDiv.append(awayTeam + ": " + awayScore);
+
 
       $("#games").append(gameDiv);
       console.log(response.data);

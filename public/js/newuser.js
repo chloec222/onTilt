@@ -1,8 +1,8 @@
 $(document).ready(function() {
   // Getting references to the name inout and author container, as well as the table body
-  var nameInput = $("#author-name");
+  var nameInput = $("#user-name");
   var authorList = $("tbody");
-  var authorContainer = $(".author-container");
+  var authorContainer = $(".user-container");
   // Adding event listeners to the form to create a new object, and the button to delete
   // an Author
   $(document).on("submit", "#author-form", handleAuthorFormSubmit);
@@ -41,18 +41,18 @@ $(document).ready(function() {
     newTr.data("author", authorData);
     newTr.append("<td>" + authorData.name + "</td>");
     newTr.append(
-      "<td># of posts will display when we learn joins in the next activity!</td>"
+      "<td>TOTAL BETS: </td>"
     );
     newTr.append(
-      "<td><a href='/blog?author_id=" + authorData.id + "'>Go to Posts</a></td>"
+      "<td><a href='/newmain?author_id=" + authorData.id + "'>ALL USERS</a></td>"
     );
     newTr.append(
-      "<td><a href='/cms?author_id=" +
+      "<td><a href='/newbets?author_id=" +
         authorData.id +
-        "'>Create a Post</a></td>"
+        "'>NEW BET</a></td>"
     );
     newTr.append(
-      "<td><a style='cursor:pointer;color:red' class='delete-author'>Delete Author</a></td>"
+      "<td><a style='cursor:pointer;color:red' class='delete-author'>DELETE USER</a></td>"
     );
     return newTr;
   }
@@ -88,7 +88,7 @@ $(document).ready(function() {
   function renderEmpty() {
     var alertDiv = $("<div>");
     alertDiv.addClass("alert alert-danger");
-    alertDiv.text("You must create an Author before you can create a Post.");
+    alertDiv.text("You must create an user account before you can make a bet.");
     authorContainer.append(alertDiv);
   }
 
