@@ -29,17 +29,16 @@ app.engine(
 app.set("view engine", "handlebars");
 
 app.get("/", (req, res) => {
-  res.render("landing", {layout:"main2"});
+  res.render("landing", { layout: "main2" });
 });
 
 app.get("/landing", (req, res) => {
-  res.render("landing", {layout:"main2"});
+  res.render("landing", { layout: "main2" });
 });
 
 // app.get("/signup", (req, res) => {
 //   res.render("schedule", {});
 // });
-
 
 // app.get("/login", (req, res) => {
 //   res.render("dash", {});
@@ -48,30 +47,40 @@ app.get("/landing", (req, res) => {
 // ==============self route======================
 
 app.get("/home", (req, res) => {
-  res.render("home", {layout:"main"});
+  res.render("home", { layout: "main" });
 });
 
 app.get("landing", (req, res) => {
-  res.render("home", {layout:"main"});
+  res.render("home", { layout: "main" });
 });
 
 app.get("/schedule", function(req, res) {
   res.render("schedule");
 });
 
+app.get("/newmain", function(req, res) {
+  res.render("newmain", { layout: "main2" });
+});
+
+app.get("/newusers", function(req, res) {
+  res.render("newusers", { layout: "main2" });
+});
+
+app.get("/newbets", function(req, res) {
+  res.render("newbets", { layout: "main2" });
+});
+
 app.get("/signup", (req, res) => {
-  res.render("signup", {layout:"main2"});
+  res.render("signup", { layout: "main2" });
 });
 
 app.get("/login", (req, res) => {
-  res.render("login", {layout:"main2"});
+  res.render("login", { layout: "main2" });
 });
-
 
 app.get("/bet", (req, res) => {
   res.render("bet", {});
 });
-
 
 app.get("/dash", (req, res) => {
   res.render("dash", {});
@@ -80,31 +89,27 @@ app.get("/dash", (req, res) => {
 // ================back to home==========================
 
 app.get("/schedule", (req, res) => {
-  res.render("home", {layout: "main"});
+  res.render("home", { layout: "main" });
 });
 
 app.get("/dash", (req, res) => {
-  res.render("home", {layout: "main"});
+  res.render("home", { layout: "main" });
 });
-
 
 app.get("/bet", (req, res) => {
-  res.render("home", {layout: "main"});
+  res.render("home", { layout: "main" });
 });
-
-
 
 app.get("/login", (req, res) => {
-  res.render("home", {layout: "main"});
+  res.render("home", { layout: "main" });
 });
 
-
 app.get("/home", (req, res) => {
-  res.render("home", {layout: "main"});
+  res.render("home", { layout: "main" });
 });
 
 app.get("/signup", (req, res) => {
-  res.render("home", {layout: "main"});
+  res.render("home", { layout: "main" });
 });
 // =========================API ROUTE CALLS CODE====================================
 
