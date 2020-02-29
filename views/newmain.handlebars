@@ -1,0 +1,39 @@
+{{#section 'styles'}}
+<link rel="stylesheet" href="/css/userdash.css">
+
+{{/section}}
+
+<div class="container blog">
+    <div class="row">
+        <div class="col-md-2 col-sm-2">
+            <a class="btn btn-default" href="/newbets">New Bet</a>
+        </div>
+        <div class="col-md-2 col-sm-2">
+            <a class="btn btn-default" href="/newusers">Manage Users</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 blog-container">
+
+            <div class="panel panel-default" data-post="{{id}}">
+                <div class="panel-heading">
+                    <button class="delete btn btn-danger">x</button>
+                    <button class="edit btn btn-info">EDIT</button>
+                    <h2>{{title}}</h2>
+                    <small>{{createdAt}}</small>
+                    </h2>
+                    <h5 style="float: right; color: blue; margin-top: -10px;">Written by: {{Author.name}} </h5>
+                </div>
+                <div class="panel-body">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{{#section 'scripts'}}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
+<script src="/js/newmain.js"></script>
+{{/section}}
