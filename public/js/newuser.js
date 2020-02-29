@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Getting references to the name inout and author container, as well as the table body
-  var nameInput = $("#user-name");
+  var nameInput = $("#author-name");
   var authorList = $("tbody");
   var authorContainer = $(".user-container");
   // Adding event listeners to the form to create a new object, and the button to delete
@@ -40,16 +40,14 @@ $(document).ready(function() {
     var newTr = $("<tr>");
     newTr.data("author", authorData);
     newTr.append("<td>" + authorData.name + "</td>");
+    newTr.append("<td>TOTAL BETS: </td>");
     newTr.append(
-      "<td>TOTAL BETS: </td>"
-    );
-    newTr.append(
-      "<td><a href='/newmain?author_id=" + authorData.id + "'>ALL USERS</a></td>"
-    );
-    newTr.append(
-      "<td><a href='/newbets?author_id=" +
+      "<td><a href='/newmain?author_id=" +
         authorData.id +
-        "'>NEW BET</a></td>"
+        "'>ALL USERS</a></td>"
+    );
+    newTr.append(
+      "<td><a href='/newbets?author_id=" + authorData.id + "'>NEW BET</a></td>"
     );
     newTr.append(
       "<td><a style='cursor:pointer;color:red' class='delete-author'>DELETE USER</a></td>"
