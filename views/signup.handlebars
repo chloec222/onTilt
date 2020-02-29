@@ -1,0 +1,66 @@
+<!-- signup form -->
+<div class="container text-center pt-5" id="signinWidth">
+  <h3>Sign up to start placing bids on your favorite teams.</h3>
+  <h5>Already have an OnTilt account? <span><a href="/login"> Log In.</a></span></h5>
+
+<form class="needs-validation" novalidate>
+
+  <!-- name -->
+  <div class="form-row pt-5">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom01">First Name</label>
+      <input type="text" class="form-control" id="validationCustom01" required>
+      <div class="valid-feedback">
+        Valid.
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom02">Last name</label>
+      <input type="text" class="form-control" id="validationCustom02" required>
+      <div class="valid-feedback">
+        Valid.
+      </div>
+    </div>
+  </div>
+
+  <!-- username & password -->
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustomEmail">Email</label>
+      <div class="input-group">
+        <input type="email" class="form-control" id="validationCustomEmail" aria-describedby="inputGroupPrepend"  required>
+        <div class="invalid-feedback">
+          Please enter in a valid email.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="inputPassword5">Password</label>
+        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" required>
+        <small id="passwordHelpBlock" class="form-text text-light">
+          Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+        </small>
+    </div>
+  </div>
+
+  <!-- consent -->
+  <div class="form-group pt-5">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        I agree to the <span><a href="">Terms of Use and the Privacy Policy</a></span> and confirm that I am at least 18 years of age. Must be 21 years of age to place bids in certain states. 
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+   <a href="/schedule" class="btn btn-primary px-4 mt-3">SUBMIT</a>
+</form>
+</div>
+
+{{#section 'scripts'}}
+<script src="/js/signinValid.js"></script>
+{{/section}}
+

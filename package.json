@@ -1,0 +1,33 @@
+{
+  "name": "ontilt",
+  "version": "1.0.0",
+  "description": "Sport Betting App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chloec222/onTilt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chloec222/onTilt/issues"
+  },
+  "homepage": "https://github.com/chloec222/onTilt#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "handlebars": "^4.7.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "nodemon": "^2.0.2",
+    "sequelize": "^5.21.4",
+    "sequelize-cli": "^5.5.1"
+  }
+}

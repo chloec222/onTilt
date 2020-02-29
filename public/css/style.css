@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container{
+    height:300px;
+    position: relative;
+  }
+
+  .content{
+    padding:3em 0;
+  }
+
+  #homeContainer{
+    height:300px;
+    position: relative;
+  }
+  
+  #homeContent{
+    padding:3em 0;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container{
+    height:400px;
+    position: relative;
+  }
+
+  .content{
+    padding:3em 0;
+  }
+
+  #homeContainer{
+    height:400px;
+    position: relative;
+  }
+  
+  #homeContent{
+    padding:3em 0;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container{
+    height:500px;
+    position: relative;
+  }
+  .content{
+    padding:6em 0;
+  }
+
+  #homeContainer{
+    height:500px;
+    position: relative;
+  }
+  
+  #homeContent{
+    padding:6em 0;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container{
+    height:700px;
+    position: relative;
+  }
+  .content{
+    padding:9em 0;
+  }
+
+  #homeContainer{
+    height:700;
+    position: relative;
+  }
+  
+  #homeContent{
+    padding:9em 0;
+  }
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container{
+    height:800px;
+    position: relative;
+  }
+  .content{
+    padding:12em 0;
+  }
+
+  #homeContainer{
+    height:800px;
+    position: relative;
+  }
+  
+  #homeContent{
+    padding:12em 0;
+  }
+}
+
+
+body{
+  font-family: 'Quicksand', sans-serif;
+  background-color: black;
+  font-size: 1em;
+  position: relative;
+  color: whitesmoke;
+  /* padding-bottom: 100em; */
+}
+
+.jumbotron{
+  background-color: black;
+  color: whitesmoke;
+}
+
+
+.navbar{
+  text-transform: uppercase;
+  background-color: black;
+  color:whitesmoke;
+}
+
+.navbar-toggler{
+  background-color: whitesmoke;
+}
+
+.container .container-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('191736.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity:.65;
+}
+
+.container .content {
+  position: relative;
+  z-index: 1;
+}
+
+.content{
+  text-align: center;
+}
+
+#homeContainer #homeBkgd {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('basketball.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity:.95;
+}
+
+#homeContainer #homeContent {
+  position: relative;
+  z-index: 1;
+}
+
+#homeContent{
+  text-align: center;
+}
+
+
+#logo{
+  font-family: 'Faster One', cursive;
+  letter-spacing: .2em;
+  font-size: 3.5em;
+  padding-top: 1em;
+}
+
+#sm_logo{
+  font-family: 'Faster One', cursive;
+  letter-spacing: .2em;
+  color:whitesmoke;
+}
+
+
+#motto {
+  font-family: 'Russo One', sans-serif;
+  font-weight: lighter;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  text-shadow: 0 0 30px black;
+}
+
+#slogan{
+  font-size: 1em;
+  text-shadow: 0 0 10px black;
+}
+
+#mainBtn{
+  text-shadow: 0 0 20px black;
+  background-color: rgb(0,0,0,0.5);
+  font-size: 1rem;
+}
+
+.card-header{
+  color:black;
+}
+
+#logo_md{
+  font-family: 'Faster One', cursive;
+  letter-spacing: .2em;
+  color:whitesmoke;
+  text-shadow: 0 0 10px black;
+}
+
+#logo_login{
+  font-family: 'Faster One', cursive;
+  letter-spacing: .2em;
+  color:black;
+  
+}
+ label{
+   text-transform: uppercase;
+ }
+
+ #forgotPWLink{
+   font-size: 1rem;
+   padding-top:1em;
+ }
+
+#loginWidth{
+  max-width:max-content;
+  padding-bottom: 100em;
+} 
+
+#signinWidth{
+  padding-bottom: 100em;
+}
+
+
+#acctUl{
+  margin: 2em 0;
+}
+
+.acctList{
+  margin: 2em 0;
+  font-weight: 600;
+  margin-left: 1em;
+}
+
+
+.card{
+  max-width:35em;
+}
+
+.card-title{
+  text-transform: uppercase;
+}
+
+#featPic1, #featPic2, #featPic3 {
+  max-width: fit-content;
+  margin-top:.2em;
+}
+
+#gamesWpMotto{
+  font-family: 'Russo One', sans-serif;
+  font-weight: lighter;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  text-shadow: 0 0 30px rgb(255, 255, 255);
+}
+
+#user-name{
+  border-radius: .5em .5em;
+  width: 20em;
+  height:2.5em;
+}
+
+#game-name{
+  border-radius: .5em .5em;
+  width: 20em;
+  height:2.5em;
+}
+
+td{
+  width:100%;
+}
+
+.user-container{
+  color:white;
+}
+
+#dashboard{
+  color: rgb(51, 51, 51);
+}
