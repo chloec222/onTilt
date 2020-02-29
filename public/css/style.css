@@ -115,7 +115,7 @@ body{
   font-size: 1em;
   position: relative;
   color: whitesmoke;
-  /* padding-bottom: 100em; */
+  padding-bottom: 100em;
 }
 
 .jumbotron{
@@ -155,32 +155,10 @@ body{
   text-align: center;
 }
 
-#homeContainer #homeBkgd {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url('basketball.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity:.95;
-}
-
-#homeContainer #homeContent {
-  position: relative;
-  z-index: 1;
-}
-
-#homeContent{
-  text-align: center;
-}
-
-
 #logo{
   font-family: 'Faster One', cursive;
   letter-spacing: .2em;
-  font-size: 3.5em;
+  font-size: 2em;
   padding-top: 1em;
 }
 
@@ -302,4 +280,53 @@ td{
 
 #dashboard{
   color: rgb(51, 51, 51);
+}
+
+#betContainer, .wrapper{
+  margin:auto;
+  margin-top:1em;
+}
+
+.btn{
+  width:9em;
+  text-align: center;
+}
+
+.table{
+margin:auto;
+}
+
+#border{
+  border:1px solid white;
+  background-color: rgb(21, 21, 100);
+}
+
+#border2{
+  border:1px solid white;
+  background-color: rgb(100, 21, 21);
+}
+
+#scheduleTitle{
+  margin: 1em;
+  text-shadow: 0 0 30px rgb(255, 255, 255);
+}
+
+#scheduleTitle2{
+  margin: 1em;
+  text-shadow: 0 0 30px rgb(255, 255, 255);
+}
+
+#betbtn{
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+}
+
+.wrapper{
+  text-align: center;
+}
+
+span{
+  color:yellow;
+  font-weight: 800;
 }

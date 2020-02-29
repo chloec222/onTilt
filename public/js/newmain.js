@@ -14,7 +14,7 @@ $(document).ready(function() {
       method: "DELETE",
       url: "/api/users/" + id
     }).then(function() {
-      alert("post deleted!");
+      alert("Bet deleted!");
       $(`[data-bet=${id}]`).remove();
     });
   }
@@ -32,7 +32,7 @@ $(document).ready(function() {
     var id = $(this)
       .closest("[data-bet]")
       .attr("data-bet");
-    window.location.href = "/cms?bet=" + id;
+    window.location.href = "/newmain?bet=" + id;
   }
 
   // This function displays a messgae when there are no posts
@@ -46,7 +46,7 @@ $(document).ready(function() {
     var messageh2 = $("<h2>");
     messageh2.css({ "text-align": "center", "margin-top": "50px" });
     messageh2.html(
-      "No posts yet" +
+      "No bets yet" +
         partial +
         ", navigate <a href='/newbet" +
         query +

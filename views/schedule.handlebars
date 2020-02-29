@@ -1,52 +1,55 @@
-{{#section 'styles'}}
+{{!-- {{#section 'styles'}}
 <link rel="stylesheet" href="/css/userdash.css">
 
-{{/section}}
+{{/section}} --}}
 
+<div class="user-container bg-dark rounded-lg pt-5 blog">
+        <div class="row">
+        <div class="col-md-2 col-sm-2 text-center" >
+            <a class="btn btn-primary mt-2" href="/newusers">USERS</a>
+        </div>
+        
+        <div class="col-md-2 col-sm-2 text-center" >
+            <a class="btn btn-primary mt-2"href="/newbets">NEW BET </a>
+        </div>
+      </div>
+   
+  <div class="row">
+    <div class="col" >
+        <h1 id="scheduleTitle">UPCOMING NBA GAMES</h1>
+        <hr />
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3 rounded-lg text-center px-1 py-1 mb-5" id="border">
+            
+            <div id="games"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h1>Upcoming NBA Games</h1>
-<div id="games"></div>
-<h1>Previous NBA Games</h1>
-<div id="pregames"></div>
-
-<h1>Ongoing NBA Games</h1>
-<div id="games"></div>
-
-<h3>**either we make a make a bet button here or the form directly here**</h3>
-
-
+      <br />
+      <hr />
+      <br />
 <div class="user-container shadow p-3 mb-5 bg-dark rounded-lg pt-5 blog">
   <div class="row">
-    <div class="col">
-      <h1 id="dashTitle">MAKE A BET</h1>
-      <h6>Pick a team, make a bet and watch the game happen.</h6>
-<div class="container">
-      <form>
+    <div class="col" >
+        <h1 id="scheduleTitle2">PREVIOUS NBA GAMES</h1>
+        <hr />
         <div class="row">
-          <div class="col">
-            <label for="title">YOUR NAME</label>
-            <input type="text" class="form-control" placeholder="Name">
+          <div class="col-lg-6 offset-lg-3 rounded-lg text-center px-1 py-1" id="border2">
+            
+            <div id="pregames"></div>
           </div>
         </div>
-
-        <div class="form-group">
-          <label for="title">ENTER TEAM NAME</label>
-          <input placeholder="Team Name " type="text" class="form-control" id="team">
-          <br />
-          <label for="body">ENTER BET AMOUNT</label>
-          <input placeholder="$ " type="text" class="form-control" id="bet">
-      
-          <div class="form-group">
-       
-          </div>
-          <br />
-          <a href="/dash" class="btn btn-primary px-4 mt-3">SUBMIT</a>
-        </div>
-      </form>
     </div>
   </div>
 </div>
 
+
+
+   
+ 
 {{#section 'scripts'}}
 <script src="/js/userdash.js"></script>
 <script src="/js/previousgames.js"></script>
