@@ -36,52 +36,52 @@
 
 
 <div class="container blog bg-dark rounded-lg shadow p-3 mb-5 bg-dark pt-5">
-    <div class="row">
-        <div class="col-md-12 blog-container">
-            <div class="panel panel-default" data-post="{{id}}">
-                <div class="panel-heading">
-                    <div class="wrapper">
-                    <a class="btn btn-primary text-light" href="/newbets">NEW BET</a>
-                    <button class="edit btn btn-secondary text-center mx-2 my-2 px-2 py-2" id="edit">EDIT BET</button>
-                    {{!-- <a class="btn btn-primary text-light" href="/newusers">ALL USERS</a> --}}
-                    <button class="delete btn btn-danger text-center m-2 p-2" id="close">CLOSE</button>
-                    </div>
-                    <form id="cms">
-                        
-                        <div class="form-group text-center mt-5">
-                            <h3>EDIT/UPDATE BETS</h3>
-                            <div class="panel panel-default" data-post="{{id}}"></div>
-                            <label for="title">Name of bet: {{title}}</label>
-                            <input placeholder="Name of selected team" type="text" class="form-control mt-2" id="title">
-                            <br />
-                            <label for="body">Date created at: {{createdAt}}</label>
-                            <textarea placeholder="Date of placed bet" class="form-control mt-2 mb-3" rows="1" id="body"></textarea>
-                            <div class="form-group">
-                                <label for="title">Name of user: {{Author.name}}</label>
-                                <input placeholder="User name" type="text" class="form-control mt-2 mb-3 " id="user">
+  <div class="row">
+    <div class="col-md-12 blog-container">
+      <div class="panel panel-default" data-post="{{id}}">
+        <div class="panel-heading">
+          <div class="wrapper">
+            <a class="btn btn-primary text-light" href="/newbets">NEW BET</a>
+            <button class="edit btn btn-secondary text-center mx-2 my-2 px-2 py-2" id="edit">EDIT BET</button>
+            {{!-- <a class="btn btn-primary text-light" href="/newusers">ALL USERS</a> --}}
+            <button class="delete btn btn-danger text-center m-2 p-2" id="close">CLOSE</button>
+          </div>
+          <form id="cms">
 
-                                <label for="category">SELECT USER:</label>
-                                    <select class="form-control mt-2 mb-3" id="user">
-                                    </select>
-                            </div>
-                            </div>
-                            <br />
-                        </div>
-                    </form>
+            <div class="form-group text-center mt-5">
+              <h3>EDIT/UPDATE BETS</h3>
+              <div class="panel panel-default" data-post="{{id}}"></div>
+              <label for="title">Name of bet: {{title}}</label>
+              <input placeholder="Name of selected team" type="text" class="form-control mt-2" id="title">
+              <br />
+              <label for="body">Date created at: {{createdAt}}</label>
+              <textarea placeholder="Date of placed bet" class="form-control mt-2 mb-3" rows="1" id="body"></textarea>
+              <div class="form-group">
+                <label for="title">Name of user: {{Author.name}}</label>
+                <input placeholder="User name" type="text" class="form-control mt-2 mb-3 " id="user">
 
-                    <h2></h2>
-                    <h2>{{title}}</h2>
-                    <small>{{createdAt}}</small>
-                    
-                    <h5 style="color: rgb(216, 216, 219); margin-top: -10px;"> {{Author.name}} </h5>
-                </div>
-                </div>
-
-                <div class="panel-body"></div>
+                <label for="category">SELECT USER:</label>
+                <select class="form-control mt-2 mb-3" id="user">
+                </select>
+              </div>
             </div>
+            <br />
         </div>
+        </form>
+
+        <h2></h2>
+        <h2>{{title}}</h2>
+        <small>{{createdAt}}</small>
+
+        <h5 style="color: rgb(216, 216, 219); margin-top: -10px;"> {{Author.name}} </h5>
+      </div>
     </div>
- </div>
+
+    <div class="panel-body"></div>
+  </div>
+</div>
+</div>
+</div>
 </div>
 
 
