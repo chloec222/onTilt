@@ -2,8 +2,18 @@ const db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/bets/", function(req, res) {
-    db.Bet.findAll({}).then(function(dbBet) {
-      res.json(dbBet);
+    var query = {};
+    if (req.query.user_id) {
+      query.UserId = req.query.user_id;
+    }
+    // Here we add an "include" property to our options in our findAll query
+    // We set the value to an array of the models we want to include in a left outer join
+    // In this case, just db.Author
+    db.Bet.findAll({
+      where: query,
+      include: [db.User]
+    }).then(function(dbPost) {
+      res.json(dbPost);
     });
   });
   app.post("/api/bets", function(req, res) {
@@ -18,7 +28,8 @@ module.exports = function(app) {
     db.Bet.findOne({
       where: {
         id: req.params.id
-      }
+      },
+      include: [db.User]
     }).then(function(dbBet) {
       res.json(dbBet);
     });
