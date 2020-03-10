@@ -15,13 +15,13 @@ $(document).ready(function() {
 
   // If we have this section in our url, we pull out the post id from the url
   // In '?post_id=1', postId is 1
-  if (url.indexOf("?bet=") !== -1) {
+  if (url.indexOf("?bet_id=") !== -1) {
     postId = url.split("=")[1];
-    getPostData(betId, "bet");
+    getPostData(postId, "bet");
   }
   // Otherwise if we have an author_id in our url, preset the author select box to be our Author
   else if (url.indexOf("?user_id=") !== -1) {
-    authorId = url.split("=")[1];
+    UserId = url.split("=")[1];
   }
 
   // Getting the authors, and their posts
@@ -42,7 +42,7 @@ $(document).ready(function() {
     var newPost = {
       teamName: titleInput.val().trim(),
       wager: bodyInput.val().trim(),
-      AuthorId: authorSelect.val()
+      UserId: authorSelect.val()
     };
 
     // If we're updating a post run updatePost to update a post
@@ -57,7 +57,7 @@ $(document).ready(function() {
 
   // Submits a new post and brings user to blog page upon completion
   function submitPost(post) {
-    $.post("/api/posts", post, function() {
+    $.post("/api/bets", post, function() {
       window.location.href = "/newmain";
     });
   }
@@ -81,7 +81,7 @@ $(document).ready(function() {
         // If this post exists, prefill our cms forms with its data
         titleInput.val(data.title);
         bodyInput.val(data.body);
-        authorId = data.AuthorId || data.id;
+        UserId = data.UserId || data.id;
         // If we have a post with this id, set a flag for us to know to update the post
         // when we hit submit
         updating = true;
@@ -97,7 +97,7 @@ $(document).ready(function() {
   // to create an author first
   function renderAuthorList(data) {
     if (!data.length) {
-      window.location.href = "/users";
+      window.location.href = "/newmain";
     }
     var rowsToAdd = [];
     for (var i = 0; i < data.length; i++) {
