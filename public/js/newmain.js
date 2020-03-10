@@ -77,7 +77,8 @@ $(document).ready(function() {
     var newPostTitle = $("<h2>");
     var newPostDate = $("<small>");
     var newPostAuthor = $("<h5>");
-    newPostAuthor.text("Written by: " + bet.user);
+    var my_obj_str = JSON.stringify(bet.User.name);
+    newPostAuthor.text("Gambler: " + my_obj_str);
     newPostAuthor.css({
       float: "right",
       color: "blue",
