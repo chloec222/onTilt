@@ -64,32 +64,37 @@ $(document).ready(function() {
   function createNewRow(bet) {
     var formattedDate = new Date(bet.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+
     var newPostCard = $("<div>");
-    newPostCard.addClass("card");
+    newPostCard.addClass("card mx-5 my-5 border-0 rounded-lg text-center bg-dark");
     var newPostCardHeading = $("<div>");
     newPostCardHeading.addClass("card-header");
     var deleteBtn = $("<button>");
-    deleteBtn.text("x");
-    deleteBtn.addClass("delete btn btn-danger");
+    deleteBtn.text("DELETE");
+    deleteBtn.addClass("delete btn btn-outline-danger mx-5 my-2 text-center");
     var editBtn = $("<button>");
     editBtn.text("EDIT");
-    editBtn.addClass("edit btn btn-info");
+    editBtn.addClass("edit btn btn-outline-primary mx-5 my-2");
     var newPostTitle = $("<h2>");
+    newPostTitle.addClass("newPostTitle");
     var newPostDate = $("<small>");
     var newPostAuthor = $("<h5>");
+    newPostAuthor.addClass("userTagName");
     var my_obj_str = JSON.stringify(bet.User.name);
-    newPostAuthor.text("Gambler: " + my_obj_str);
-    newPostAuthor.css({
-      float: "right",
-      color: "blue",
-      "margin-top": "-10px"
-    });
+    
+    
+  newPostAuthor.text("BETTOR: " + my_obj_str);
+    // newPostAuthor.css({
+    //   float: "right",
+    //   color: "blue",
+    //   "margin-top": "-10px"
+    // });
     var newPostCardBody = $("<div>");
     newPostCardBody.addClass("card-body");
-    var newPostBody = $("<p>");
+    var newPostBody = $("<p id='betTag'>");
     newPostTitle.text(bet.teamName + " ");
-    newPostBody.text(bet.wager);
-    newPostDate.text(formattedDate);
+    newPostBody.text("BET AMOUNT: $" + bet.wager);
+    newPostDate.text("was betted on " + formattedDate);
     newPostTitle.append(newPostDate);
     newPostCardHeading.append(deleteBtn);
     newPostCardHeading.append(editBtn);
@@ -131,7 +136,7 @@ $(document).ready(function() {
     var messageH2 = $("<h2>");
     messageH2.css({ "text-align": "center", "margin-top": "50px" });
     messageH2.html(
-      "No posts yet" +
+      "No bets yet" +
         partial +
         ", navigate <a href='/cms" +
         query +

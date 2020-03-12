@@ -19,7 +19,7 @@ $(document).ready(function() {
       console.log(awayTeam);
       gameDiv.append(
         `${homeTeam} ${homeScore ||
-          ""} <span>vs</span> ${awayTeam} ${awayScore || ""}`
+          ""} <span class="vs">vs</span> ${awayTeam} ${awayScore || ""}`
       );
 
       // gameDiv.append(homeTeam + ": " + homeScore + " " + " " + " | " + "<span>vs</span>" + " | " + " " + " ");
