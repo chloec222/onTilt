@@ -1,26 +1,67 @@
-{{!-- {{#section 'styles'}}
-<link rel="stylesheet" href="/css/userdash.css">
 
-{{/section}} --}}
+ 
+  {{>jumbotron2}}
 
+<div class="container mb-5" id="mainSteps">
+    <div class="row">
+        <div class="col">
+          <div class="wrapper" id="wrapper1">
+            <h4 id="h4Main"><span id="logoMain">ONTILT</span><span id="whiteSpace"> </span>  THE BASKETBALL SPORTS BETTING APP </h4>
+            <h6>How to bet online:</h6>
+          </div>
 
-<div class="container blog">
-  <div class="row">
-    <div class="col-md-2 col-sm-2">
-      <a class="btn btn-light" href="/cms">New Post</a>
+            <div class="wrapper">
+              <button type="button" class="btn btn-dark my-4 mx-2"  data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="CREATE USER ACCOUNT">FIRST <i class="fas fa-user-plus"></i></button>
+              <button type="button" class="btn btn-dark my-4 mx-2"  data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="VIEW THE GAMES">THEN <i class="fas fa-basketball-ball"></i></button>
+              <button type="button" class="btn btn-dark my-4 mx-2"  data-toggle="popover"  data-trigger="focus" data-placement="bottom" data-content="SELECT A TEAM TO BET ON">NEXT <i class="far fa-handshake"></i></button>
+              <button type="button" class="btn btn-dark my-4 mx-2 "  tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="MAKE THE BET">AFTER <i class="fas fa-comment-dollar"></i></i></button>
+                <button type="button" class="btn btn-dark my-4 mx-2 "  tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="PLAY AGAIN">FINALLY <i class="fas fa-hand-holding-usd"></i></button>
+            </div>
+        </div>
     </div>
-    <div class="col-md-2 col-sm-2">
-      <a class="btn btn-light" href="/authors">Manage Authors</a>
+</div>
+
+<div class="container" id="livegameContainer">
+    <h4 id="gameContainerTitle">GAME OF THE WEEK</h4>
+
+  <div class="row">
+    <div class="col d-flex justify-content-center mt-3">
+      {{>gamehighlight1}}
+    </div>
+    <div class="col d-flex justify-content-center mt-3">
+      {{>gamehighlight2}}
     </div>
   </div>
+</div>
+
+<hr />
+
+<div class="container blog ">
+  <div class="row">
+    <div class="wrapper">
+      <div class="col-md-2 col-sm-2 d-inline">
+      <a class="btn btn-outline-light" href="/newusers">Create a New User</a>
+    </div>
+    <div class="col-md-2 col-sm-2 d-inline">
+      <a class="btn btn-outline-light" href="/newbets">Make a new Bet</a>
+    </div>
+    </div>
+  </div>
+  
   <div class="row">
     <div class="col-md-12 blog-container">
     </div>
   </div>
 </div>
 
+<script>
+ $(function () {
+  $('[data-toggle="popover"]').popover();
+});
+
+</script>
+
 {{#section 'scripts'}}
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-{{!-- <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet"> --}}
+<script src="https://kit.fontawesome.com/66afa559f4.js" crossorigin="anonymous"></script>
 <script src="/js/newmain.js"></script>
 {{/section}}

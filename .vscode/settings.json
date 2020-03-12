@@ -1,2 +1,30 @@
 {
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#8bd194",
+        "activityBar.activeBackground": "#8bd194",
+        "activityBar.activeBorder": "#8176c9",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#8176c9",
+        "activityBarBadge.foreground": "#15202b",
+        "titleBar.activeBackground": "#66c372",
+        "titleBar.inactiveBackground": "#66c37299",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveForeground": "#15202b99",
+        "statusBar.background": "#66c372",
+        "statusBarItem.hoverBackground": "#45b153",
+        "statusBar.foreground": "#15202b",
+        "panel.border": "#8bd194",
+        "sideBar.border": "#8bd194",
+        "editorGroup.border": "#8bd194",
+        "tab.activeBorder": "#8bd194"
+    },
+    "peacock.color": "#66c372",
+    "files.autoSave": "afterDelay",
+    "open-php-html-js-in-browser.customUrlToOpen": "",
+    "open-php-html-js-in-browser.documentRootFolder": "http;//localhost",
+    "open-php-html-js-in-browser.selectedBrowser": "Chrome",
+    "peacock.affectTabActiveBorder": true,
+    "peacock.affectAccentBorders": true,
+    "liveServer.settings.useBrowserPreview": true
 }

@@ -1,34 +1,33 @@
-{{!-- {{#section 'styles'}}
-<link rel="stylesheet" href="/css/userdash.css">
-
-{{/section}} --}}
-
 
 <div class="container">
     <div class="row top-30">
         <div class="col-md-2 col-sm-2">
-            <a class="btn btn-default" href="/blog">Go to Blog</a>
+            <a class="btn btn-default" href="/newmain">VIEW MAIN</a>
         </div>
         <div class="col-md-2 col-sm-2">
-            <a class="btn btn-default" href="/authors">Manage Authors</a>
+            <a class="btn btn-default" href="/newusers">VIEW USERS</a>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-6 m-auto">
+            <h1 id="dashTitle">MAKE A BET</h1>
+            <h6>Pick a team, make a bet and watch the game happen.</h6>
             <form id="cms">
-                <div class="form-group">
-                    <label for="title">Title:</label>
-                    <input placeholder="Post Title" type="text" class="form-control" id="title">
+                <div class="form-group my-5">
+                    <label for="title">TEAM NAME:</label>
+                    <input placeholder="Enter Team Name" type="text" class="form-control" id="title">
                     <br />
-                    <label for="body">Body:</label>
-                    <textarea placeholder="Post Body" class="form-control" rows="10" id="body"></textarea>
-                    <div class="form-group">
-                        <label for="category">Select Author:</label>
+                    <label for="body">BET AMOUNT:</label>
+                    <textarea placeholder="$" class="form-control" rows="1" id="body"></textarea>
+                    <div class="form-group my-4">
+                        <label for="category">Select User:</label>
                         <select class="form-control" id="author">
                         </select>
                     </div>
                     <br />
-                    <button type="submit" class="btn btn-success submit">Submit</button>
+                    <div class="wrapper">
+                    <button type="submit" class="btn btn-primary submit">SUBMIT</button>
+                    </div>
                 </div>
             </form>
         </div>

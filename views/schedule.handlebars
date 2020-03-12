@@ -1,25 +1,28 @@
-{{!-- {{#section 'styles'}}
-<link rel="stylesheet" href="/css/userdash.css">
 
-{{/section}} --}}
 
-<div class="user-container bg-dark rounded-lg pt-5 blog">
-        <div class="row">
-        <div class="col-md-2 col-sm-2 text-center" >
-            <a class="btn btn-primary mt-2" href="/newusers">USERS</a>
-        </div>
-        
-        <div class="col-md-2 col-sm-2 text-center" >
-            <a class="btn btn-primary mt-2"href="/newbets">NEW BET </a>
-        </div>
-      </div>
-   
+{{>jumbotron3}}
+
+<div class="container" id="gamesBtn">
   <div class="row">
-    <div class="col" >
-        <h1 id="scheduleTitle">UPCOMING NBA GAMES</h1>
+    <div class="wrapper">
+      <div class="col-md-2 col-sm-2 d-inline">
+      <a class="btn btn-outline-light" href="/newusers">Create a New User</a>
+    </div>
+    <div class="col-md-2 col-sm-2 d-inline">
+      <a class="btn btn-outline-light" href="/newbets">Make a new Bet</a>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="user-container pt-5">
+  <div class="row">
+    <div class="col">
+        <h4 id="scheduleTitle">UPCOMING NBA GAMES</h4>
         <hr />
         <div class="row">
-          <div class="col-lg-6 offset-lg-3 rounded-lg text-center px-1 py-1 mb-5" id="border">
+          <div class="col-lg-6 offset-lg-3 bg-light text-dark rounded-lg text-center px-1 py-1 mb-5" id="border">
             
             <div id="games"></div>
           </div>
@@ -31,13 +34,13 @@
       <br />
       <hr />
       <br />
-<div class="user-container shadow p-3 mb-5 bg-dark rounded-lg pt-5 blog">
+<div class="user-container pt-5 blog">
   <div class="row">
-    <div class="col" >
-        <h1 id="scheduleTitle2">PREVIOUS NBA GAMES</h1>
+    <div class="col">
+        <h4 id="scheduleTitle2">PREVIOUS NBA GAMES</h4>
         <hr />
         <div class="row">
-          <div class="col-lg-6 offset-lg-3 rounded-lg text-center px-1 py-1" id="border2">
+          <div class="col-lg-6 offset-lg-3 bg-light text-dark rounded-lg text-center px-1 py-1" id="border2">
             
             <div id="pregames"></div>
           </div>
@@ -47,9 +50,16 @@
 </div>
 
 
+<div class="container mt-5 mb-5" id="leagues">
+  <h4 id="leagueTitle">NBA Leagues</h4>
+  <div class="row">
+    <div class="col text-center">
+    {{>bbwidget}}
+    </div>
+  </div>
+</div>
 
-   
- 
+
 {{#section 'scripts'}}
 <script src="/js/userdash.js"></script>
 <script src="/js/previousgames.js"></script>

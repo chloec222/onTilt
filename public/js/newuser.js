@@ -38,19 +38,20 @@ $(document).ready(function() {
   function createAuthorRow(authorData) {
     console.log(authorData);
     var newTr = $("<tr>");
+    
     newTr.data("author", authorData);
-    newTr.append("<td>" + authorData.name + "</td>");
-    newTr.append("<td>TOTAL BETS: </td>");
+    newTr.append("<td colspan='2'>" + authorData.name + "</td>");
+    // newTr.append("<td>TOTAL BETS: </td>");
     newTr.append(
-      "<td><a href='/newmain?author_id=" +
+      "<td colspan='2'><a href='/newmain?author_id=" +
         authorData.id +
-        "'>ALL USERS</a></td>"
+        "'>VIEW BET</a></td>"
     );
     newTr.append(
-      "<td><a href='/newbets?author_id=" + authorData.id + "'>NEW BET</a></td>"
+      "<td colspan='2'><a href='/newbets?author_id=" + authorData.id + "'>MAKE BET</a></td>"
     );
     newTr.append(
-      "<td><a style='cursor:pointer;color:red' class='delete-author'>DELETE USER</a></td>"
+      "<td colspan='2'><a style='cursor:pointer;color:red' class='delete-author'>DELETE USER</a></td>"
     );
     return newTr;
   }
