@@ -18,16 +18,21 @@ Applications Used:
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#### OnTilt | *Homepage* |
-![Image of home](/public/css/images/onTilt_home.png)
+#### OnTilt | *Main* |
+![Image of home](/public/css/ontiltmain.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#### OnTilt | *Signup* |
-![Image of signup](/public/css/images/OnTilt_signup.png)
+#### OnTilt | *Main-dashboard* |
+![Image of dashboard](/public/css/main2.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#### OnTilt | *Login* |
-![Image of login](/public/css/images/OnTilt_login.png)
+#### OnTilt | *Games* |
+![Image of games](/public/css/games.png)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+#### OnTilt | *Betting* |
+![Image of betting](/public/css/bet.png)
 
