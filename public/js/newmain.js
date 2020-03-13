@@ -6,7 +6,7 @@ $(document).ready(function() {
   var postCategorySelect = $("#category");
   // Click events for the edit and delete buttons
   $(document).on("click", "button.delete", handlePostDelete);
-  $(document).on("click", "button.edit", handlePostEdit);
+  // $(document).on("click", "button.edit", handlePostEdit);
   // Variable to hold our posts
   var posts;
 
@@ -72,9 +72,9 @@ $(document).ready(function() {
     var deleteBtn = $("<button>");
     deleteBtn.text("DELETE");
     deleteBtn.addClass("delete btn btn-danger mx-5 my-2 text-center");
-    var editBtn = $("<button>");
-    editBtn.text("EDIT");
-    editBtn.addClass("edit btn btn-light mx-5 my-2");
+    // var editBtn = $("<button>");
+    // editBtn.text("EDIT");
+    // editBtn.addClass("edit btn btn-light mx-5 my-2");
     var newPostTitle = $("<h2>");
     newPostTitle.addClass("newPostTitle");
     var newPostDate = $("<small>");
@@ -94,10 +94,10 @@ $(document).ready(function() {
     var newPostBody = $("<p id='betTag'>");
     newPostTitle.text(bet.teamName + " ");
     newPostBody.text("BET AMOUNT: $" + bet.wager);
-    newPostDate.text("was betted on " + formattedDate);
+    newPostDate.text("was placed on " + formattedDate);
     newPostTitle.append(newPostDate);
     newPostCardHeading.append(deleteBtn);
-    newPostCardHeading.append(editBtn);
+    // newPostCardHeading.append(editBtn);
     newPostCardHeading.append(newPostTitle);
     newPostCardHeading.append(newPostAuthor);
     newPostCardBody.append(newPostBody);
@@ -117,13 +117,13 @@ $(document).ready(function() {
   }
 
   // This function figures out which post we want to edit and takes it to the appropriate url
-  function handlePostEdit() {
-    var currentPost = $(this)
-      .parent()
-      .parent()
-      .data("post");
-    window.location.href = "/cms?bets_id=" + currentPost.id;
-  }
+  // function handlePostEdit() {
+  //   var currentPost = $(this)
+  //     .parent()
+  //     .parent()
+  //     .data("post");
+  //   window.location.href = "/cms?bets_id=" + currentPost.id;
+  // }
 
   // This function displays a message when there are no posts
   function displayEmpty(id) {
