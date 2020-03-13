@@ -1,6 +1,7 @@
 # OnTilt
 ### Overview
 OnTilt is a Sport Betting App. The app allows a user to make a bid on a selected sports team and update the user on winnings/losses. 
+App Demo: https://ontiltsports.herokuapp.com/
 
 ### Contributors:
 
@@ -12,7 +13,7 @@ Applications Used:
 - [x] Sports DB API
 - [x] mySQl, Express, Express-handlebars, Body-parser, Sequelize
 
-- [x] UI Kit, Chart.js, Bootstrap
+- [x] UI Kit, Bootstrap
 
 
 --------------------------------------------------------------------------------------------------------------------------------------
