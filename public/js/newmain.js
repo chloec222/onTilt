@@ -71,10 +71,10 @@ $(document).ready(function() {
     newPostCardHeading.addClass("card-header");
     var deleteBtn = $("<button>");
     deleteBtn.text("DELETE");
-    deleteBtn.addClass("delete btn btn-outline-danger mx-5 my-2 text-center");
+    deleteBtn.addClass("delete btn btn-danger mx-5 my-2 text-center");
     var editBtn = $("<button>");
     editBtn.text("EDIT");
-    editBtn.addClass("edit btn btn-outline-primary mx-5 my-2");
+    editBtn.addClass("edit btn btn-light mx-5 my-2");
     var newPostTitle = $("<h2>");
     newPostTitle.addClass("newPostTitle");
     var newPostDate = $("<small>");
