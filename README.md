@@ -9,8 +9,8 @@ App Demo: https://ontiltsports.herokuapp.com/
 - Byron Tottaram (https://github.com/byronst10/)
 - Spencer Mogil (https://github.com/smogil12)
 
-Applications Used:
-- [x] Sports DB API
+Technologies Used:
+- [x] Sports DB API, Statsdream.com/widgets/
 - [x] mySQl, Express, Express-handlebars, Body-parser, Sequelize
 
 - [x] UI Kit, Bootstrap
