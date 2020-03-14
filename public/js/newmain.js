@@ -66,7 +66,9 @@ $(document).ready(function() {
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
 
     var newPostCard = $("<div>");
-    newPostCard.addClass("card mx-5 my-5 border-0 rounded-lg text-center bg-dark");
+    newPostCard.addClass(
+      "card mx-5 my-5 border-0 rounded-lg text-center bg-dark"
+    );
     var newPostCardHeading = $("<div>");
     newPostCardHeading.addClass("card-header");
     var deleteBtn = $("<button>");
@@ -81,9 +83,8 @@ $(document).ready(function() {
     var newPostAuthor = $("<h5>");
     newPostAuthor.addClass("userTagName");
     var my_obj_str = JSON.stringify(bet.User.name);
-    
-    
-  newPostAuthor.text("BETTOR: " + my_obj_str);
+
+    newPostAuthor.text("BETTOR: " + my_obj_str);
     // newPostAuthor.css({
     //   float: "right",
     //   color: "blue",
@@ -112,7 +113,7 @@ $(document).ready(function() {
     var currentPost = $(this)
       .parent()
       .parent()
-      .data("post");
+      .data("bet");
     deletePost(currentPost.id);
   }
 
