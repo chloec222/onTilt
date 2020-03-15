@@ -19,8 +19,10 @@ $(document).ready(function() {
       console.log(homeTeam);
       console.log(awayTeam);
 
-      gameDiv.append(homeTeam + ": " + homeScore + " "  + "<span class='vs'>vs</span>" + " ");
-      gameDiv.append(awayTeam + ": " + awayScore);
+      gameDiv.append(
+        `${homeTeam} ${homeScore ||
+          ""} <span class="vs">vs</span> ${awayTeam} ${awayScore || ""}`
+      );
 
       $("#pregames").append(gameDiv);
       console.log(response.data);
